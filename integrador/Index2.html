@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./asset/styles/estilos.css">
+    
     <title>Inicio</title>
 </head>
 <body >
@@ -15,9 +15,23 @@
     <div class="menuContainer ">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom ">
           <a href="./paneladministrativo/iindexx.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none ">
-                <img src="/asset/img/rueditasconf.png" alt="configuracion.png" width="40" height="40">
+                <img src="/asset/img/rueditasconf.png" alt="configuracion.png" width="40" height="40">                
           </a> 
-          <ul class="nav col-8 col-md-auto mb-2 justify-content-center mb-md-0 bg-icon ">
+          <ul class="nav col-8 col-md-auto mb-2 justify-content-center mb-md-0 bg-icon ">        
+            <link rel="stylesheet" href="../sidebar/css/main.css">
+            <body>
+              <div id="sidebar">
+                <div class="toggle-btn">
+                  <span>&#9776</span>
+                </div>
+                <ul><li>
+                  <img src="../asset/img/logotype5.png" alt="Logo Fazt" class="logo">
+                </li>
+                <li class="nav-item"><a href="/Index2.html" class="nav-link px-2 text-center">Inicio</a></li>
+                <li class="nav-item"><a href="/views/eventos2.html" class="nav-link px-2 text-Center">Eventos</a></li>
+                <li class="nav-item"><a href="/views/resultados2.html" class="nav-link px-2 text-center">Resultados</a></li>
+                </ul>
+              </div>     
             <li><a href="./views/resultados2.html" class="nav-link px-2 link-dark">Resultados</a></li>
             <li><a href="/Index2.html" class="nav-link px-2 link-dark">Inicio</a></li>
             <li><p><img src="/asset/img/logotype5.png " width="130" height="130" alt="logo"></p></li>        
@@ -29,7 +43,6 @@
         </header>
       </div>
     </nav>
-
 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -98,6 +111,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="/sidebar/js/scripts.js"></script>
 </body>
 
 </html>

@@ -16,10 +16,24 @@
   <nav>
     <div class="menuContainer ">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom ">
-          <a href="/paneladmin/iindexx.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none ">
+          <a href="/paneladministrativo/iindexx.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none ">
                 <img src="/asset/img/rueditasconf.png" alt="configuracion.png" width="40" height="40">
           </a> 
           <ul class="nav col-8 col-md-auto mb-2 justify-content-center mb-md-0 bg-icon ">
+            <link rel="stylesheet" href="../sidebar/css/main.css">
+            <body>
+              <div id="sidebar">
+                <div class="toggle-btn">
+                  <span>&#9776</span>
+                </div>
+                <ul><li>
+                  <img src="../asset/img/logotype5.png" alt="Logo Fazt" class="logo">
+                </li>
+                <li class="nav-item"><a href="/Index2.html" class="nav-link px-2 text-center">Inicio</a></li>
+                <li class="nav-item"><a href="/views/eventos2.html" class="nav-link px-2 text-Center">Eventos</a></li>
+                <li class="nav-item"><a href="/views/resultados2.html" class="nav-link px-2 text-center">Resultados</a></li>
+                </ul>
+              </div>
             <li><a href="/Index2.html" class="nav-link px-2 link-dark">C O N F I G U R A C I O N</a></li>
           </ul>
           <div class="col-md-3 text-end">
@@ -50,22 +64,17 @@
           <label for="cuatri" class="form-label">Usuario</label>
           <input type="text" class="form-control" id="cuatri" placeholder="Cambie su nombre de usuario">
         </div>
-        <div class="col-md-8 text-center">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password" placeholder="Cambie su contraseña">
           </div>
         <div class="col-md-8 text-center">
           <label for="num" class="form-label">Telefono</label>
           <input type="int" class="form-control" id="int" placeholder="Cambie su numero telefonico">
         </div>
 
-        <div
-         class="col-md-3 text-center">
-                <button type="submit" class="btn btn-success" tabindex="-1" role="button" >Guardar cambios</button>
-          </div> 
-
-
-
+        <div class="col-md-3 text-center">
+          <a href="/paneladministrativo/cambiarcontra.html" class="btn btn-success" tabindex="-1" role="button" >Configurar Contraseña</a>
+              </div> 
+          
+              <a href="/paneladministrativo/iindexx.html" class="btn btn-success" tabindex="-1" role="button" >Guardar Cambios</a>
           <div class="footerContainer">
             <footer class="py-3 my-4">
               <ul class="nav justify-content-center border-bottom pb-3 mb-3">
@@ -81,7 +90,8 @@
         
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        </body>
+        <script src="../sidebar/js/scripts.js"></script>  
+      </body>
         
         </html>
 
