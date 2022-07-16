@@ -206,49 +206,41 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>idproductos</th>
-                        <th>idproveedor</th>
-                        <th>nombre_p</th>
-                        <th>lote</th>
-                        <th>codigo_producto</th>
-                        <th>stock</th>
-                        <th>marca</th>
-                        <th>estproducto</th>
-                        <th>cantproducto</th>
-                        <th>diasutiles</th>
-                        <th>fechadquisicion</th>
-                        <th>caducidad</th>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Cuatrimestre</th>
+                        <th>Correo</th>
+                        <th>Contraseña</th>
+                        <th>Carrera</th>
+                        <th>Usuario</th>
+                        
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                    <th>idproductos</th>
-                        <th>idproveedor</th>
-                        <th>nombre_p</th>
-                        <th>lote</th>
-                        <th>codigo_producto</th>
-                        <th>stock</th>
-                        <th>marca</th>
-                        <th>estproducto</th>
-                        <th>cantproducto</th>
-                        <th>diasutiles</th>
-                        <th>fechadquisicion</th>
-                        <th>caducidad</th>
+                    <th>Nombre</th>
+                        <th>Apellido paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Cuatrimestre</th>
+                        <th>Correo</th>
+                        <th>Contraseña</th>
+                        <th>Carrera</th>
+                        <th>Usuario</th>
+                        
                        </tr>
 </tfoot>
                 
-
-
-                    <!-- Inicializamos un archivo de php -->
+             <!-- Inicializamos un archivo de php -->
                     
-<?php>
-$conexion = new mysqli("localhost", "root", "", "mipaginaweb");
+<?php
+$conexion = new mysqli("localhost", "root", "", "mipaggames");
 
 if (!$conexion) {
-echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
-echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
-echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
-exit;
+  echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+  echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+  echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+  exit;
 }
 
 echo "Éxito: Se realizó una conexión apropiada a MySQL! La base de datos mi_bd es genial." . PHP_EOL;
@@ -258,10 +250,12 @@ echo "Información del host: " . mysqli_get_host_info($conexion) . PHP_EOL;
 ?>
 
 
+
 </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
+            
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -274,7 +268,7 @@ echo "Información del host: " . mysqli_get_host_info($conexion) . PHP_EOL;
         </div>
         <!-- End of Content Wrapper -->
 
-    </div>
+    </div> 
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
