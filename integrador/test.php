@@ -24,4 +24,4 @@ $h = new Home();
 
 ?>
 
-<a href="<?=$h->get['base_url'].'/views/categories.php'?>">Base</a>
+<a href="<?=$h->get['base_url'].'/integrador/consulta.php'?>">Base</a>

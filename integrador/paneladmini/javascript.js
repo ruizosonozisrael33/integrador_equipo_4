@@ -1,1 +1,0 @@
-alert('Mando a tarer mi primer archivo js');
