@@ -43,7 +43,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.PHP">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Crear Evento</span></a>
+                    <span>Inicio</span></a>
             </li>
 
           
@@ -67,11 +67,11 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pantallas de inicio</h6>
-                        <a class="collapse-item" href="#">Rgistrar usuario</a>
-                        <a class="collapse-item" href="#">Cambiar contraseña</a>
+                        <a class="collapse-item" href="registrarusua.php">Rgistrar usuario</a>
+                        <a class="collapse-item" href="cambiarcontra.php">Cambiar contraseña</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Otras páginas:</h6>
-                        <a class="collapse-item" href="#">Crear evento</a>
+                        <a class="collapse-item" href="cereaevento.php">Crear evento</a>
                     </div>
                 </div>
             </li>
@@ -85,7 +85,7 @@
             </li>
             <!-- Nav Item - Exit -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="../Index2.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Salir</span></a>
             </li>
@@ -167,7 +167,7 @@
                                 </a>
                             
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../Index2" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cerrar sesión
                                 </a>
@@ -184,7 +184,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Inicio</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Crear evento</h1>
                     </div>
 
 
@@ -199,19 +199,19 @@
 
                         <form class="row g-3">
 
-                          <div class="col-6 text-center">
+                          <div class="col-4 ">
                             <label for="nombre" class="form-label">Nombre del Evento</label>
                             <input type="text" class="form-control" id="nombre" placeholder="Asigne nombre a su Evento">
                           </div>
-                          <div class="col-6 text-center">
+                          <div class="col-4">
                             <label for="apellidop" class="form-label">Codigo Acceso</label>
                             <input type="text" class="form-control" id="apellidop" placeholder="Access code">
                           </div>
-                          <div class="col-6 text-center">
+                          <div class="col-4 ">
                             <label for="apellidomat" class="form-label">Numero de Participantes</label>
                             <input type="text" class="form-control" id="apellidomat" placeholder="Participantes del equipo">
                           </div>
-                          <div class="col-6 text-center">
+                          <div class="col-4">
                             <label for="cuatri" class="form-label">Nombre del Juego</label>
                             <input type="text" class="form-control" id="cuatri" placeholder="Juego a participar">
                           </div>
@@ -235,7 +235,7 @@
 </form>
 
 
-                    </div>
+                   
 
                 </div>
                 <!-- /.container-fluid -->
