@@ -43,7 +43,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.PHP">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Inicio</span></a>
+                    <span>Crear Evento</span></a>
             </li>
 
           
@@ -71,7 +71,7 @@
                         <a class="collapse-item" href="#">Cambiar contraseña</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Otras páginas:</h6>
-                        <a class="collapse-item" href="creaevento.php">Crear evento</a>
+                        <a class="collapse-item" href="#">Crear evento</a>
                     </div>
                 </div>
             </li>
@@ -195,26 +195,44 @@
                         <div class="col-lg-6 mb-4">
                         </div>
 
-                                           
-                        <div class="col-lg-10 mb-2 text-center">
+                        
 
-                            <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-success">Que pudes hacer en el panel administrativo</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/undraw_posting_photo.svg" alt="...">
-                                    </div>
-                                    <p>Dentro del panel administrativo puedes realizar las siguientes funciones, 
-                                        dar de alta a usuarios, dar de baja a usuarios, modificar dats de un usuario</p>
-                                  
-                                </div>
+                        <form class="row g-3">
+
+                          <div class="col-6 text-center">
+                            <label for="nombre" class="form-label">Nombre del Evento</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Asigne nombre a su Evento">
+                          </div>
+                          <div class="col-6 text-center">
+                            <label for="apellidop" class="form-label">Codigo Acceso</label>
+                            <input type="text" class="form-control" id="apellidop" placeholder="Access code">
+                          </div>
+                          <div class="col-6 text-center">
+                            <label for="apellidomat" class="form-label">Numero de Participantes</label>
+                            <input type="text" class="form-control" id="apellidomat" placeholder="Participantes del equipo">
+                          </div>
+                          <div class="col-6 text-center">
+                            <label for="cuatri" class="form-label">Nombre del Juego</label>
+                            <input type="text" class="form-control" id="cuatri" placeholder="Juego a participar">
+                          </div>
+                          <select id="categoria" class="form-select">
+                              <option selected>Selecciona la categoria </option>
+                              <option>First Person Shoter</option>
+                              <option>Carreras </option>
+                              <option>Deportes </option>
+                              <option>Acción </option>
+                      
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
-
-                         </div>
+                          <div class="col-md-3 text-center">
+                              <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Crear Evento(s)</a>
+                              
+                            </div>                    
+</form>
 
 
                     </div>
