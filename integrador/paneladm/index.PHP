@@ -67,8 +67,8 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pantallas de inicio</h6>
-                        <a class="collapse-item" href="#">Rgistrar usuario</a>
-                        <a class="collapse-item" href="#">Cambiar contraseña</a>
+                        <a class="collapse-item" href="registrarusua.php">Rgistrar usuario</a>
+                        <a class="collapse-item" href="cambiarcontra.php">Cambiar contraseña</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Otras páginas:</h6>
                         <a class="collapse-item" href="creaevento.php">Crear evento</a>
@@ -167,7 +167,7 @@
                                 </a>
                             
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="/Index2.html" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cerrar sesión
                                 </a>
@@ -260,7 +260,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-success" href="login.PHP">Logout</a>
+                    <a class="btn btn-success" href="/Index2.html">Logout</a>
                 </div>
             </div>
         </div>
