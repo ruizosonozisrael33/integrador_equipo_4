@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../asset/styles/estilos.css">
+
+    <title>Registro a evento</title>
+</head>
+<body>
+  <nav  style="background-color: #44474779;">
+  <div class="container " >
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom ">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none ">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Logo"><use xlink:href="logo"/></svg>
+      </a> 
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 bg-icon ">
+        <h4><a href="/views/resultados2.html" class="nav-link px-2 link-light">Resultados</a></h4>
+        <h4><a href="/Index2.html" class="nav-link px-2 link-light">Inicio</a></h4>
+        <h4><a href="/views/eventos2.html" class="nav-link px-2 link-light">Eventos </a></h4>
+      </ul>
+      <div class="col-md-3 text-end">
+        <a href="/views/eventos2.html" class="btn btn-success" tabindex="-1" role="button" >Regresar</a>
+        </div> 
+      
+    </header>
+  </div>
+  </nav>
+<br><br><br>
+
+<p class="col-12 text-center">A continuacion para registrarte o inscribirte al evento llena los siguientes datos</p>
+
+
+<form class="row g-12 ">
+ 
+  <div class="col-12 " >
+
+  <div class="col-md-6 offset-md-3 ">
+    <label for="correo" class="form-label">Correo</label>
+    <input type="email" class="form-control"  id="inputEmail4" placeholder="almatricula@gmail.com">
+  </div>
+  <div class="col-md-6 offset-md-3">
+    <label for="nomusuario" class="form-label">Nombre de usuario</label>
+    <input type="text" class="form-control" id="nomusuario" placeholder="Escribe tu nombre de usuario">
+  </div>
+
+  <div class="col-md-6 offset-md-3">
+    <label for="carrera" class="form-label">Evento</label>
+    <select id="carrera" class="form-select">
+      <option selected>Confirma el evento </option>
+      <option>Evento APEX GOLD </option>
+      <option>Evento Gears3 </option>
+      <option>Evento COD Moblie </option>
+
+
+    </select>
+  </div>
+<br>
+
+
+<!-- Button trigger modal -->
+<div class="col-12 text-center">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Registrarse
+  </button>
+ </div> 
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Grandioso te has inscrito al evento</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Mantente en sintonia con la fecha del evento
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</form>
+<br><br><br>
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="/views/eventos2.html" class="nav-link px-2 text-muted">Eventos</a></li>
+      <li class="nav-item"><a href="/views/resultados2.html" class="nav-link px-2 text-muted">Resultados</a></li>
+    </ul>
+    <p class="text-center text-muted">&copy; 2022 RAVENGAMES, Inc</p>
+  </footer>
+</div>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
