@@ -204,20 +204,30 @@
                         <div class="col-lg-10 mb-2 text-center">
 
                             <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-success">Que pudes hacer en el panel administrativo</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/undraw_posting_photo.svg" alt="...">
-                                    </div>
-                                    <p>Dentro del panel administrativo puedes realizar las siguientes funciones, 
-                                        dar de alta a usuarios, dar de baja a usuarios, modificar dats de un usuario</p>
-                                  
-                                </div>
-                            </div>
+                          
+                            <form class="row g-12 ">
+ 
+  <div class="col-12 " >
+
+    <div class="col-md-6 offset-md-3">
+        <label for="password" class="form-label">Antigua Contraseña</label>
+        <input type="password" class="form-control" id="password" placeholder="Escribe una contraseña de 8 caracteres">
+      </div>
+  <div class="col-md-6 offset-md-3">
+    <label for="password" class="form-label">Nueva Contraseña</label>
+    <input type="password" class="form-control" id="password" placeholder="Escribe una contraseña de 8 caracteres">
+  </div>
+  <div class="col-md-6 offset-md-3">
+    <label for="password" class="form-label">Repita su Nueva Contraseña</label>
+    <input type="password" class="form-control" id="password" placeholder="Escribe una contraseña de 8 caracteres">
+  </div>
+<br>
+  <div class="col-12 text-center">
+    <a href="/paneladministrativo/configuracion.html" class="btn btn-success" tabindex="-1" role="button" >Cambiar contraseña</a>
+  </div>
+ 
+  </div>
+</form>
 
                          </div>
 
