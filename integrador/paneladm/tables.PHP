@@ -203,6 +203,9 @@
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Datos de las Tablas </h6>
     </div>
+    <div class="col-md-3">
+        <a type="text" class="btn btn-success" tabindex="-1" role="button" href="registrarusua.php">Crear Usuario</a>  
+        </div> 
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
