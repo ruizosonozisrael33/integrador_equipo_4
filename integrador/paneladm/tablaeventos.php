@@ -198,12 +198,16 @@
 <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
     For more information about DataTables, please visit the <a target="_blank"
         href="https://datatables.net">official DataTables documentation</a>.</p>
+        
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Datos de las Tablas de Eventos </h6>
     </div>
+    <div class="col-md-3">
+        <a type="text" class="btn btn-success" tabindex="-1" role="button" href="creaevento.php">Crear Evento(s)</a>  
+        </div> 
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
