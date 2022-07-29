@@ -19,6 +19,11 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+      <!-- Custom styles for this page -->
+      <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
+
 
 </head>
 
@@ -67,10 +72,8 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pantallas de inicio</h6>
-                        <a class="collapse-item" href="#">Rgistrar usuario</a>
-                        <a class="collapse-item" href="#">Cambiar contraseña</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Otras páginas:</h6>
+                        <a class="collapse-item" href="registrarusua.php">Rgistrar usuario</a>
+                        <a class="collapse-item" href="cambiarcontra.php">Cambiar contraseña</a>
                         <a class="collapse-item" href="creaevento.php">Crear evento</a>
                     </div>
                 </div>
@@ -83,6 +86,12 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tablas de usuarios</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tablaeventos.PHP">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tablas de Eventos</span></a>
+            </li>
+
             <!-- Nav Item - Exit -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
@@ -161,13 +170,13 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="perfil.php">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>
                             
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../Index2.html" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cerrar sesión
                                 </a>
@@ -179,88 +188,73 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Registrar Usuario</h1>
-                    </div>
+                
+  <!-- Begin Page Content -->
+  <div class="container-fluid">
 
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Tablas</h1>
+<p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+    For more information about DataTables, please visit the <a target="_blank"
+        href="https://datatables.net">official DataTables documentation</a>.</p>
 
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Contenidoo xd  -->
-                        <div class="col-lg-6 mb-4">
-                        </div>
-
-                                           
-                        <form class="row g-3">
-
-    <div class="col-4">
-      <label for="nombre" class="form-label">Nombre(s)</label>
-      <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre">
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Datos de las Tablas de Eventos </h6>
     </div>
-    <div class="col-4">
-      <label for="apellidop" class="form-label">Primer Apellido</label>
-      <input type="text" class="form-control" id="apellidop" placeholder="Escribir primer Apellido">
-    </div>
-    <div class="col-4">
-      <label for="apellidomat" class="form-label">Segundo Apellido</label>
-      <input type="text" class="form-control" id="apellidomat" placeholder="Escribir segundo Apellido">
-    </div>
-    <div class="col-md-4">
-      <label for="cuatri" class="form-label">Cuatrimestre</label>
-      <input type="text" class="form-control" id="cuatri" placeholder="Coloca tu cuatrimestre actual en letras">
-    </div>
-    <div class="col-md-8">
-      <label for="correo" class="form-label">Correo</label>
-      <input type="email" class="form-control" id="correo" placeholder="almatricula@gmail.com">
-    </div>
-    <div class="col-md-5">
-      <label for="password" class="form-label">Contraseña</label>
-      <input type="password" class="form-control" id="password" placeholder="Escribe una contraseña de 8 caracteres">
-    </div>
-    <div class="col-md-7">
-      <label for="carrera" class="form-label">Carrera</label>
-      <select id="carrera" class="form-select">
-        <option selected>Selecciona tu carrera </option>
-        <option>Tecnologias de la informacion y comunicacion area de Desarrollo de Software Multiplataforma</option>
-        <option>Tecnologias de la informacion y comunicacion area Infraestructura de Redes Digitales </option>
-        <option>Mantenimiento Industrial </option>
-        <option>Negocios area Ventas </option>
-        <option>Negocios area Mercadotecnia </option>
-        <option>Licenciatura en enfermeria </option>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Nombre Evento</th>
+                        <th>id evento</th>
+                        <th>Descripcion</th>
+                        <th>Fecha</th>
+                        <th>Lugar</th>
+                      
+                        
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>id evento</th>
+                        <th>Descripcion</th>
+                        <th>Fecha</th>
+                        <th>Lugar</th>
+        
+                        
+                       </tr>
+</tfoot>
+                
+             <!-- Inicializamos un archivo de php -->
+                    
+<?php
+$conexion = new mysqli("localhost", "root", "", "mipaggames");
+
+if (!$conexion) {
+  echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+  echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+  echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+  exit;
+}
+
+echo "Éxito: Se realizó una conexión apropiada a MySQL! La base de datos mi_bd es genial." . PHP_EOL;
+echo "Información del host: " . mysqli_get_host_info($conexion) . PHP_EOL;
 
 
-      </select>
-    </div>
-    <div class="col-md-5">
-      <label for="nomusuario" class="form-label">Usuario</label>
-      <input type="text" class="form-control" id="nomusuario" placeholder="Coloca un nombre de ususario de 10 caracteres">
-    </div>
+?>
 
-    <div class="col-12 text-center">
-      <div class="form-check-center" >
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Check me out
-        </label>
-      </div>
-    </div>
-    <div class="col-12 text-center">
-      <button type="submit" class="btn btn-success">Registrarse</button>
-    </div>
-  </form>
 
-                </div>
-                <!-- /.container-fluid -->
 
-            </div>
+</div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
+            
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -273,7 +267,7 @@
         </div>
         <!-- End of Content Wrapper -->
 
-    </div>
+    </div> 
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
@@ -292,7 +286,7 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">selecciona "salir" si estas seguro de salir de la sesion actual.</div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-success" href="login.PHP">Logout</a>

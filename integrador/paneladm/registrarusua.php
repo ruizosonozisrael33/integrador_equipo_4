@@ -81,6 +81,11 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tablas de usuarios</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tablaeventos.PHP">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tablas de Eventos</span></a>
+            </li>
             <!-- Nav Item - Exit -->
             <li class="nav-item">
                 <a class="nav-link" href="../Index2.html">
