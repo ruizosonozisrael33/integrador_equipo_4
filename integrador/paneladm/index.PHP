@@ -59,35 +59,40 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsua"
+                    aria-expanded="true" aria-controls="collapseUsua">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Páginas</span>
+                    <span>Usuarios</span>
                 </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div id="collapseUsua" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Pantallas de inicio</h6>
+                        <h6 class="collapse-header">Pantallas</h6>
                         <a class="collapse-item" href="registrarusua.php">Rgistrar usuario</a>
-                        <a class="collapse-item" href="cambiarcontra.php">Cambiar contraseña</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Otras páginas:</h6>
-                        <a class="collapse-item" href="creaevento.php">Crear evento</a>
+                        <a class="collapse-item" href="tables.php">Tabla de usuarios</a>
+                    
                     </div>
                 </div>
             </li>
 
 
-            <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.PHP">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tablas de usuarios</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEve"
+                    aria-expanded="true" aria-controls="collapseEve">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Eventos</span>
+                </a>
+                <div id="collapseEve" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pantallas</h6>
+                        <a class="collapse-item" href="creaevento.php">Crear evento</a>
+                        <a class="collapse-item" href="tablaeventos.php">Tabla de evento</a>
+                    </div>
+                </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tablaeventos.PHP">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tablas de Eventoos</span></a>
-            </li>
+
+
+          
+            
             <!-- Nav Item - Exit -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
