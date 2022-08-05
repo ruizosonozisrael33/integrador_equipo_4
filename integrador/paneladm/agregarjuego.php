@@ -256,7 +256,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Crear evento</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Agregar Juegos</h1>
                     </div>
 
 
@@ -264,41 +264,33 @@
                     <div class="row">
 
                         <!-- Contenidoo xd  -->
-                        <div class="col-lg-6 mb-4">
+                        <div class="col-lg-8 mb-4">
                         </div>
 
                         
 
-                        <form class="row g-3">
+                        <form class="row g-3 text-center">
 
-                          <div class="col-4 ">
-                            <label for="nombre" class="form-label">Nombre del Evento</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Asigne nombre a su Evento">
+                          <div class="col-8  ">
+                            <label for="nomjuego" class="form-label">Nombre del Juego</label>
+                            <input type="text" class="form-control" id="nomjuego" placeholder="Asigne nombre del juego">
                           </div>
-                          <div class="col-4">
-                            <label for="apellidop" class="form-label">Codigo Acceso</label>
-                            <input type="text" class="form-control" id="apellidop" placeholder="Access code">
+                          <div class="col-8  ">
+                            <label for="versionjuego" class="form-label">Version de juego</label>
+                            <input type="text" class="form-control" id="versionjuego" placeholder="Poner la version del juego">
                           </div>
-                          <div class="col-4 ">
-                            <label for="apellidomat" class="form-label">Numero de Participantes</label>
-                            <input type="text" class="form-control" id="apellidomat" placeholder="Participantes del equipo">
-                          </div>
-                          <div class="col-4">
-                            <label for="cuatri" class="form-label">Nombre del Juego</label>
-                            <input type="text" class="form-control" id="cuatri" placeholder="Juego a participar">
-                          </div>
-                          <select id="categoria" class="form-select">
-                              <option selected>Selecciona la categoria </option>
-                              <option>First Person Shoter</option>
-                              <option>Carreras </option>
-                              <option>Deportes </option>
-                              <option>Acción </option>
-                      
-                            </select>
-                          </div>
-                          <div class="mb-3">
-                              <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          <div class="col-8">
+                            <label for="consola" class="form-label">Consola</label>
+                            <input type="text" class="form-control" id="consola" placeholder="Agrega la consola para el juego">
+                          <div class="col-8">
+                              <label for="añodejuego" class="form-label">Año del juego</label>
+                              <input type="text" class="form-control" id="añodejuego" placeholder="Agrega el año del juego">
+
+                            </div>
+                            <div class="col-8">
+                              <label for="idcategoria" class="form-label">Id categoria</label>
+                              <input type="text" class="form-control" id="idcategoria" placeholder="Agrega el id de la cateforia correspondiente">
+
                             </div>
                           <div class="col-md-3 text-center">
                               <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Crear Evento(s)</a>
