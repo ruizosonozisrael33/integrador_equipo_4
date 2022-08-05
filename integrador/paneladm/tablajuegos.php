@@ -106,8 +106,8 @@
                 <div id="collapseJuegos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pantallas</h6>
-                        <a class="collapse-item" href="#">Agregar Juegos</a>
-                        <a class="collapse-item" href="#">Tabla de Juegos</a>
+                        <a class="collapse-item" href="agregarjuego.php">Agregar Juegos</a>
+                        <a class="collapse-item" href="tablajuegos.php">Tabla de Juegos</a>
                     </div>
                 </div>
             </li>
@@ -271,10 +271,10 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Datos de las Tablas de Eventos </h6>
+        <h6 class="m-0 font-weight-bold text-primary">Datos de las Tablas de Juegos </h6>
     </div>
     <div class="col-md-3">
-        <a type="text" class="btn btn-success" tabindex="-1" role="button" href="creaevento.php">Crear Evento(s)</a>  
+        <a type="text" class="btn btn-success" tabindex="-1" role="button" href="agregarjuego.php">Agregar Juego(s)</a>  
         </div> 
     <div class="card-body">
         <div class="table-responsive">

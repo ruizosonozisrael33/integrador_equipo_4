@@ -100,8 +100,8 @@
                 <div id="collapseJuegos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pantallas</h6>
-                        <a class="collapse-item" href="#">Agregar Juegos</a>
-                        <a class="collapse-item" href="#">Tabla de Juegos</a>
+                        <a class="collapse-item" href="agregarjuego.php">Agregar Juegos</a>
+                        <a class="collapse-item" href="tablajuegos.php">Tabla de Juegos</a>
                     </div>
                 </div>
             </li>
