@@ -1,7 +1,3 @@
-<?php
-include_once('./cone/conection.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,9 +29,6 @@ include_once('./cone/conection.php');
 
 <body id="page-top">
 
-
-
-
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -59,6 +52,7 @@ include_once('./cone/conection.php');
             </li>
 
           
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -165,8 +159,7 @@ include_once('./cone/conection.php');
                     </div>
                 </div>
             </li>
-
-
+            
             <!-- Nav Item - Exit -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
@@ -273,60 +266,60 @@ include_once('./cone/conection.php');
 <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
     For more information about DataTables, please visit the <a target="_blank"
         href="https://datatables.net">official DataTables documentation</a>.</p>
+        
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Datos de las Tablas </h6>
+        <h6 class="m-0 font-weight-bold text-primary">Datos de las Tablas de Eventos </h6>
     </div>
     <div class="col-md-3">
-        <a type="text" class="btn btn-success" tabindex="-1" role="button" href="registrarusua.php">Crear Usuario</a>  
+        <a type="text" class="btn btn-success" tabindex="-1" role="button" href="creaevento.php">Crear Evento(s)</a>  
         </div> 
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>ID usuario</th>
-                        <th>Nombre</th>
-                        <th>Apellido Paterno</th>
-                        <th>Apellido Materno</th>
-                        <th>Cuatrimestre</th>
-                        <th>Correo</th>
-                        <th>Contraseña</th>
-                        <th>Carrera</th>
-                        <th>Usuario</th>
+                        <th>x </th>
+                        <th>x</th>
+                        <th>c</th>
+                        <th>x</th>
+                        <th>x</th>
+                      
                         
                     </tr>
                 </thead>
-
-                <?php
-                $sql="SELECT * FROM usuarios";
-                $result=mysqli_query($conexion, $sql);
-
-                while($mostrar=mysql_fetch_array($result)){
-                ?>
-
                 <tfoot>
                     <tr>
-                        <th> <?php echo $mostrar['idusuario']?> </th>
-                        <th> <?php echo $mostrar['nombreus']?></th>
-                        <th> <?php echo $mostrar['apellidopatus']?></th>
-                        <th> <?php echo $mostrar['apellidomatus']?></th>
-                        <th> <?php echo $mostrar['cuatri']?></th>
-                        <th> <?php echo $mostrar['correo']?></th>
-                        <th> <?php echo $mostrar['contraseña']?></th>
-                        <th> <?php echo $mostrar['carrera']?></th>
-                        <th> <?php echo $mostrar['usuario']?> </th>
-                     
+                        <th>x</th>
+                        <th>x</th>
+                        <th>c</th>
+                        <th>x</th>
+                        <th>x</th>
+        
                         
-                 
-                   </tr>
-                <?php
-                }
-                ?>
+                       </tr>
 </tfoot>
-<tbody>
+                
+             <!-- Inicializamos un archivo de php -->
+                    
+<?php
+$conexion = new mysqli("localhost", "root", "", "mipaggames");
+
+if (!$conexion) {
+  echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+  echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+  echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+  exit;
+}
+
+echo "Éxito: Se realizó una conexión apropiada a MySQL! La base de datos mi_bd es genial." . PHP_EOL;
+echo "Información del host: " . mysqli_get_host_info($conexion) . PHP_EOL;
+
+
+?>
+
 
 
 </div>
@@ -373,15 +366,15 @@ include_once('./cone/conection.php');
             </div>
         </div>
     </div>
- 
-    <!-- Bootstrap core JavaScri pt-->
-    <script src="vendor/jquery/j query.min.js"></script>
-    <script src="vendor/bootstra p/js/bootstrap.bundle.min.js"></script>
- 
-    <!-- Core plugin JavaScript- ->
-    <script src="vendor/jquery-e asing/jquery.easing.min.js"></script>
- 
-    <!-- Custom scripts for all  pages-->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->

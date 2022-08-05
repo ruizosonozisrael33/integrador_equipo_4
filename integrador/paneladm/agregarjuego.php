@@ -1,7 +1,3 @@
-<?php
-include_once('./cone/conection.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,18 +19,10 @@ include_once('./cone/conection.php');
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-      <!-- Custom styles for this page -->
-      <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
-
-
 
 </head>
 
 <body id="page-top">
-
-
-
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -59,6 +47,7 @@ include_once('./cone/conection.php');
             </li>
 
           
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -100,7 +89,6 @@ include_once('./cone/conection.php');
                     </div>
                 </div>
             </li>
-
 
 
             <li class="nav-item">
@@ -166,10 +154,10 @@ include_once('./cone/conection.php');
                 </div>
             </li>
 
-
+            
             <!-- Nav Item - Exit -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="../Index2.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Salir</span></a>
             </li>
@@ -245,13 +233,13 @@ include_once('./cone/conection.php');
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="perfil.php">
+                                <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>
                             
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../Index2.html" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../Index2" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cerrar sesión
                                 </a>
@@ -263,77 +251,71 @@ include_once('./cone/conection.php');
                 </nav>
                 <!-- End of Topbar -->
 
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
 
-                
-  <!-- Begin Page Content -->
-  <div class="container-fluid">
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Crear evento</h1>
+                    </div>
 
-<!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Tablas</h1>
-<p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-    For more information about DataTables, please visit the <a target="_blank"
-        href="https://datatables.net">official DataTables documentation</a>.</p>
 
-<!-- DataTales Example -->
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Datos de las Tablas </h6>
-    </div>
-    <div class="col-md-3">
-        <a type="text" class="btn btn-success" tabindex="-1" role="button" href="registrarusua.php">Crear Usuario</a>  
-        </div> 
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>ID usuario</th>
-                        <th>Nombre</th>
-                        <th>Apellido Paterno</th>
-                        <th>Apellido Materno</th>
-                        <th>Cuatrimestre</th>
-                        <th>Correo</th>
-                        <th>Contraseña</th>
-                        <th>Carrera</th>
-                        <th>Usuario</th>
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Contenidoo xd  -->
+                        <div class="col-lg-6 mb-4">
+                        </div>
+
                         
-                    </tr>
-                </thead>
 
-                <?php
-                $sql="SELECT * FROM usuarios";
-                $result=mysqli_query($conexion, $sql);
+                        <form class="row g-3">
 
-                while($mostrar=mysql_fetch_array($result)){
-                ?>
+                          <div class="col-4 ">
+                            <label for="nombre" class="form-label">Nombre del Evento</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Asigne nombre a su Evento">
+                          </div>
+                          <div class="col-4">
+                            <label for="apellidop" class="form-label">Codigo Acceso</label>
+                            <input type="text" class="form-control" id="apellidop" placeholder="Access code">
+                          </div>
+                          <div class="col-4 ">
+                            <label for="apellidomat" class="form-label">Numero de Participantes</label>
+                            <input type="text" class="form-control" id="apellidomat" placeholder="Participantes del equipo">
+                          </div>
+                          <div class="col-4">
+                            <label for="cuatri" class="form-label">Nombre del Juego</label>
+                            <input type="text" class="form-control" id="cuatri" placeholder="Juego a participar">
+                          </div>
+                          <select id="categoria" class="form-select">
+                              <option selected>Selecciona la categoria </option>
+                              <option>First Person Shoter</option>
+                              <option>Carreras </option>
+                              <option>Deportes </option>
+                              <option>Acción </option>
+                      
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                          <div class="col-md-3 text-center">
+                              <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Crear Evento(s)</a>
+                              
+                            </div>                    
+</form>
 
-                <tfoot>
-                    <tr>
-                        <th> <?php echo $mostrar['idusuario']?> </th>
-                        <th> <?php echo $mostrar['nombreus']?></th>
-                        <th> <?php echo $mostrar['apellidopatus']?></th>
-                        <th> <?php echo $mostrar['apellidomatus']?></th>
-                        <th> <?php echo $mostrar['cuatri']?></th>
-                        <th> <?php echo $mostrar['correo']?></th>
-                        <th> <?php echo $mostrar['contraseña']?></th>
-                        <th> <?php echo $mostrar['carrera']?></th>
-                        <th> <?php echo $mostrar['usuario']?> </th>
-                     
-                        
-                 
-                   </tr>
-                <?php
-                }
-                ?>
-</tfoot>
-<tbody>
 
+                   
 
-</div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -346,7 +328,7 @@ include_once('./cone/conection.php');
         </div>
         <!-- End of Content Wrapper -->
 
-    </div> 
+    </div>
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
@@ -373,15 +355,15 @@ include_once('./cone/conection.php');
             </div>
         </div>
     </div>
- 
-    <!-- Bootstrap core JavaScri pt-->
-    <script src="vendor/jquery/j query.min.js"></script>
-    <script src="vendor/bootstra p/js/bootstrap.bundle.min.js"></script>
- 
-    <!-- Core plugin JavaScript- ->
-    <script src="vendor/jquery-e asing/jquery.easing.min.js"></script>
- 
-    <!-- Custom scripts for all  pages-->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
