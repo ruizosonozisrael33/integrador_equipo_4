@@ -101,8 +101,8 @@
                 <div id="collapseJuegos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pantallas</h6>
-                        <a class="collapse-item" href="#">Agregar Juegos</a>
-                        <a class="collapse-item" href="#">Tabla de Juegos</a>
+                        <a class="collapse-item" href="agregarjuego.php">Agregar Juegos</a>
+                        <a class="collapse-item" href="tablajuegos.php">Tabla de Juegos</a>
                     </div>
                 </div>
             </li>
@@ -139,6 +139,24 @@
                 </div>
             </li>
             
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePartisi"
+                    aria-expanded="true" aria-controls="collapsePartisi">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Participantes</span>
+                </a>
+                <div id="collapsePartisi" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pantallas</h6>
+                        <a class="collapse-item" href="#">Agregar Participante</a>
+                        <a class="collapse-item" href="#">Tabla de Participantes</a>
+                    </div>
+                </div>
+            </li>
+
+
+
             <!-- Nav Item - Exit -->
             <li class="nav-item">
                 <a class="nav-link" href="#">

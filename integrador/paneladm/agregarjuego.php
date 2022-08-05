@@ -89,7 +89,6 @@
                     </div>
                 </div>
             </li>
-            
 
 
             <li class="nav-item">
@@ -101,8 +100,8 @@
                 <div id="collapseJuegos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pantallas</h6>
-                        <a class="collapse-item" href="#">Agregar Juegos</a>
-                        <a class="collapse-item" href="#">Tabla de Juegos</a>
+                        <a class="collapse-item" href="agregarjuego.php">Agregar Juegos</a>
+                        <a class="collapse-item" href="tablajuegos.php">Tabla de Juegos</a>
                     </div>
                 </div>
             </li>
@@ -155,11 +154,10 @@
                 </div>
             </li>
 
-
             
             <!-- Nav Item - Exit -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="../Index2.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Salir</span></a>
             </li>
@@ -241,7 +239,7 @@
                                 </a>
                             
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/Index2.html" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../Index2" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cerrar sesión
                                 </a>
@@ -258,7 +256,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Inicio</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Crear evento</h1>
                     </div>
 
 
@@ -269,39 +267,47 @@
                         <div class="col-lg-6 mb-4">
                         </div>
 
-                                           
-                        <div class="col-lg-10 mb-2 text-center">
+                        
 
-                            <!-- Illustrations -->
-                          
-                            <form class="row g-12 ">
- 
-  <div class="col-12 " >
+                        <form class="row g-3">
 
-    <div class="col-md-6 offset-md-3">
-        <label for="password" class="form-label">Antigua Contraseña</label>
-        <input type="password" class="form-control" id="password" placeholder="Escribe una contraseña de 8 caracteres">
-      </div>
-  <div class="col-md-6 offset-md-3">
-    <label for="password" class="form-label">Nueva Contraseña</label>
-    <input type="password" class="form-control" id="password" placeholder="Escribe una contraseña de 8 caracteres">
-  </div>
-  <div class="col-md-6 offset-md-3">
-    <label for="password" class="form-label">Repita su Nueva Contraseña</label>
-    <input type="password" class="form-control" id="password" placeholder="Escribe una contraseña de 8 caracteres">
-  </div>
-<br>
-  <div class="col-12 text-center">
-    <a href="/paneladministrativo/configuracion.html" class="btn btn-success" tabindex="-1" role="button" >Cambiar contraseña</a>
-  </div>
- 
-  </div>
+                          <div class="col-4 ">
+                            <label for="nombre" class="form-label">Nombre del Evento</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Asigne nombre a su Evento">
+                          </div>
+                          <div class="col-4">
+                            <label for="apellidop" class="form-label">Codigo Acceso</label>
+                            <input type="text" class="form-control" id="apellidop" placeholder="Access code">
+                          </div>
+                          <div class="col-4 ">
+                            <label for="apellidomat" class="form-label">Numero de Participantes</label>
+                            <input type="text" class="form-control" id="apellidomat" placeholder="Participantes del equipo">
+                          </div>
+                          <div class="col-4">
+                            <label for="cuatri" class="form-label">Nombre del Juego</label>
+                            <input type="text" class="form-control" id="cuatri" placeholder="Juego a participar">
+                          </div>
+                          <select id="categoria" class="form-select">
+                              <option selected>Selecciona la categoria </option>
+                              <option>First Person Shoter</option>
+                              <option>Carreras </option>
+                              <option>Deportes </option>
+                              <option>Acción </option>
+                      
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                          <div class="col-md-3 text-center">
+                              <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Crear Evento(s)</a>
+                              
+                            </div>                    
 </form>
 
-                         </div>
 
-
-                    </div>
+                   
 
                 </div>
                 <!-- /.container-fluid -->
@@ -344,7 +350,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-success" href="/Index2.html">Logout</a>
+                    <a class="btn btn-success" href="login.PHP">Logout</a>
                 </div>
             </div>
         </div>

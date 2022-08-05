@@ -19,6 +19,11 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+      <!-- Custom styles for this page -->
+      <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
+
 
 </head>
 
@@ -89,7 +94,7 @@
                     </div>
                 </div>
             </li>
-            
+
 
 
             <li class="nav-item">
@@ -101,8 +106,8 @@
                 <div id="collapseJuegos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pantallas</h6>
-                        <a class="collapse-item" href="#">Agregar Juegos</a>
-                        <a class="collapse-item" href="#">Tabla de Juegos</a>
+                        <a class="collapse-item" href="agregarjuego.php">Agregar Juegos</a>
+                        <a class="collapse-item" href="tablajuegos.php">Tabla de Juegos</a>
                     </div>
                 </div>
             </li>
@@ -154,8 +159,6 @@
                     </div>
                 </div>
             </li>
-
-
             
             <!-- Nav Item - Exit -->
             <li class="nav-item">
@@ -235,13 +238,13 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="perfil.php">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>
                             
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/Index2.html" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../Index2.html" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cerrar sesión
                                 </a>
@@ -253,63 +256,77 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Inicio</h1>
-                    </div>
+                
+  <!-- Begin Page Content -->
+  <div class="container-fluid">
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Tablas</h1>
+<p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+    For more information about DataTables, please visit the <a target="_blank"
+        href="https://datatables.net">official DataTables documentation</a>.</p>
+        
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Datos de las Tablas de Juegos </h6>
+    </div>
+    <div class="col-md-3">
+        <a type="text" class="btn btn-success" tabindex="-1" role="button" href="agregarjuego.php">Agregar Juego(s)</a>  
+        </div> 
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>x </th>
+                        <th>x</th>
+                        <th>c</th>
+                        <th>x</th>
+                        <th>x</th>
+                      
+                        
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>x</th>
+                        <th>x</th>
+                        <th>c</th>
+                        <th>x</th>
+                        <th>x</th>
+        
+                        
+                       </tr>
+</tfoot>
+                
+             <!-- Inicializamos un archivo de php -->
+                    
+<?php
+$conexion = new mysqli("localhost", "root", "", "mipaggames");
+
+if (!$conexion) {
+  echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+  echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+  echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+  exit;
+}
+
+echo "Éxito: Se realizó una conexión apropiada a MySQL! La base de datos mi_bd es genial." . PHP_EOL;
+echo "Información del host: " . mysqli_get_host_info($conexion) . PHP_EOL;
 
 
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Contenidoo xd  -->
-                        <div class="col-lg-6 mb-4">
-                        </div>
-
-                                           
-                        <div class="col-lg-10 mb-2 text-center">
-
-                            <!-- Illustrations -->
-                          
-                            <form class="row g-12 ">
- 
-  <div class="col-12 " >
-
-    <div class="col-md-6 offset-md-3">
-        <label for="password" class="form-label">Antigua Contraseña</label>
-        <input type="password" class="form-control" id="password" placeholder="Escribe una contraseña de 8 caracteres">
-      </div>
-  <div class="col-md-6 offset-md-3">
-    <label for="password" class="form-label">Nueva Contraseña</label>
-    <input type="password" class="form-control" id="password" placeholder="Escribe una contraseña de 8 caracteres">
-  </div>
-  <div class="col-md-6 offset-md-3">
-    <label for="password" class="form-label">Repita su Nueva Contraseña</label>
-    <input type="password" class="form-control" id="password" placeholder="Escribe una contraseña de 8 caracteres">
-  </div>
-<br>
-  <div class="col-12 text-center">
-    <a href="/paneladministrativo/configuracion.html" class="btn btn-success" tabindex="-1" role="button" >Cambiar contraseña</a>
-  </div>
- 
-  </div>
-</form>
-
-                         </div>
+?>
 
 
-                    </div>
 
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
+</div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
+            
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -322,7 +339,7 @@
         </div>
         <!-- End of Content Wrapper -->
 
-    </div>
+    </div> 
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
@@ -344,7 +361,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-success" href="/Index2.html">Logout</a>
+                    <a class="btn btn-success" href="login.PHP">Logout</a>
                 </div>
             </div>
         </div>

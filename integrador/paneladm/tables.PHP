@@ -1,3 +1,7 @@
+<?php
+include_once('./cone/conection.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +33,9 @@
 
 <body id="page-top">
 
+
+
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -52,7 +59,6 @@
             </li>
 
           
-
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -94,6 +100,73 @@
                     </div>
                 </div>
             </li>
+
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseJuegos"
+                    aria-expanded="true" aria-controls="collapseJuegos">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Juegos</span>
+                </a>
+                <div id="collapseJuegos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pantallas</h6>
+                        <a class="collapse-item" href="agregarjuego.php">Agregar Juegos</a>
+                        <a class="collapse-item" href="tablajuegos.php">Tabla de Juegos</a>
+                    </div>
+                </div>
+            </li>
+          
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCate"
+                    aria-expanded="true" aria-controls="collapseCate">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Categorias de juego</span>
+                </a>
+                <div id="collapseCate" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pantallas</h6>
+                        <a class="collapse-item" href="#">Agregar Categoria de juego</a>
+                        <a class="collapse-item" href="#">Tabla de Categorias</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseResul"
+                    aria-expanded="true" aria-controls="collapseResul">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Resultados</span>
+                </a>
+                <div id="collapseResul" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pantallas</h6>
+                        <a class="collapse-item" href="#">Agregar Resultados</a>
+                        <a class="collapse-item" href="#">Tabla de Resultados</a>
+                    </div>
+                </div>
+            </li>
+            
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePartisi"
+                    aria-expanded="true" aria-controls="collapsePartisi">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Participantes</span>
+                </a>
+                <div id="collapsePartisi" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pantallas</h6>
+                        <a class="collapse-item" href="#">Agregar Participante</a>
+                        <a class="collapse-item" href="#">Tabla de Participantes</a>
+                    </div>
+                </div>
+            </li>
+
+
             <!-- Nav Item - Exit -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
@@ -214,6 +287,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
+                        <th>ID usuario</th>
                         <th>Nombre</th>
                         <th>Apellido Paterno</th>
                         <th>Apellido Materno</th>
@@ -225,38 +299,34 @@
                         
                     </tr>
                 </thead>
+
+                <?php
+                $sql="SELECT * FROM usuarios";
+                $result=mysqli_query($conexion, $sql);
+
+                while($mostrar=mysql_fetch_array($result)){
+                ?>
+
                 <tfoot>
                     <tr>
-                    <th>Nombre</th>
-                        <th>Apellido paterno</th>
-                        <th>Apellido Materno</th>
-                        <th>Cuatrimestre</th>
-                        <th>Correo</th>
-                        <th>Contraseña</th>
-                        <th>Carrera</th>
-                        <th>Usuario</th>
+                        <th> <?php echo $mostrar['idusuario']?> </th>
+                        <th> <?php echo $mostrar['nombreus']?></th>
+                        <th> <?php echo $mostrar['apellidopatus']?></th>
+                        <th> <?php echo $mostrar['apellidomatus']?></th>
+                        <th> <?php echo $mostrar['cuatri']?></th>
+                        <th> <?php echo $mostrar['correo']?></th>
+                        <th> <?php echo $mostrar['contraseña']?></th>
+                        <th> <?php echo $mostrar['carrera']?></th>
+                        <th> <?php echo $mostrar['usuario']?> </th>
+                     
                         
-                       </tr>
+                 
+                   </tr>
+                <?php
+                }
+                ?>
 </tfoot>
-                
-             <!-- Inicializamos un archivo de php -->
-                    
-<?php
-$conexion = new mysqli("localhost", "root", "", "mipaggames");
-
-if (!$conexion) {
-  echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
-  echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
-  echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
-  exit;
-}
-
-echo "Éxito: Se realizó una conexión apropiada a MySQL! La base de datos mi_bd es genial." . PHP_EOL;
-echo "Información del host: " . mysqli_get_host_info($conexion) . PHP_EOL;
-
-
-?>
-
+<tbody>
 
 
 </div>
@@ -303,15 +373,15 @@ echo "Información del host: " . mysqli_get_host_info($conexion) . PHP_EOL;
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
+ 
+    <!-- Bootstrap core JavaScri pt-->
+    <script src="vendor/jquery/j query.min.js"></script>
+    <script src="vendor/bootstra p/js/bootstrap.bundle.min.js"></script>
+ 
+    <!-- Core plugin JavaScript- ->
+    <script src="vendor/jquery-e asing/jquery.easing.min.js"></script>
+ 
+    <!-- Custom scripts for all  pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
