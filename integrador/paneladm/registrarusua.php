@@ -90,6 +90,69 @@
                 </div>
             </li>
             
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseJuegos"
+                    aria-expanded="true" aria-controls="collapseJuegos">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Juegos</span>
+                </a>
+                <div id="collapseJuegos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pantallas</h6>
+                        <a class="collapse-item" href="#">Agregar Juegos</a>
+                        <a class="collapse-item" href="#">Tabla de Juegos</a>
+                    </div>
+                </div>
+            </li>
+          
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCate"
+                    aria-expanded="true" aria-controls="collapseCate">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Categorias de juego</span>
+                </a>
+                <div id="collapseCate" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pantallas</h6>
+                        <a class="collapse-item" href="#">Agregar Categoria de juego</a>
+                        <a class="collapse-item" href="#">Tabla de Categorias</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseResul"
+                    aria-expanded="true" aria-controls="collapseResul">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Resultados</span>
+                </a>
+                <div id="collapseResul" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pantallas</h6>
+                        <a class="collapse-item" href="#">Agregar Resultados</a>
+                        <a class="collapse-item" href="#">Tabla de Resultados</a>
+                    </div>
+                </div>
+            </li>
+            
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePartisi"
+                    aria-expanded="true" aria-controls="collapsePartisi">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Participantes</span>
+                </a>
+                <div id="collapsePartisi" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pantallas</h6>
+                        <a class="collapse-item" href="#">Agregar Participante</a>
+                        <a class="collapse-item" href="#">Tabla de Participantes</a>
+                    </div>
+                </div>
+            </li>
+            
             <!-- Nav Item - Exit -->
             <li class="nav-item">
                 <a class="nav-link" href="../Index2.html">
