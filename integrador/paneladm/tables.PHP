@@ -28,7 +28,8 @@ include_once ('../BD/conexion.php')
 <body id="page-top">
 
 <?php
-include './layauts/menunavbar.php'
+include './layauts/menunavbar.php';
+include './controller/userscontroller.php';
     ?>
 
 
@@ -49,47 +50,81 @@ include './layauts/menunavbar.php'
     <div class="col-md-3">
         <a type="text" class="btn btn-success" tabindex="-1" role="button" href="registrarusua.php">Crear Usuario</a>  
         </div> 
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>ID usuario</th>
-                        <th>Nombre</th>
-                        <th>Apellido Paterno</th>
-                        <th>Apellido Materno</th>
-                        <th>Cuatrimestre</th>
-                        <th>Correo</th>
-                        <th>Contraseña</th>
-                        <th>Carrera</th>
-                        <th>Usuario</th>
-                        
-                    </tr>
-                </thead>
-
-                
-
-                <tfoot>
-                    <tr>
-                        <th> </th>
-                        <th> </th>
-                        <th> </th>
-                        <th> </th>
-                        <th> </th>
-                        <th> </th>
-                        <th> </th>
-                        <th> </th>
-                        <th>  </th>
-                     
-                        
-                 
-                   </tr>
-               
-</tfoot>
-<tbody>
+        <!--card tablas -->
+        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID usuario</th>
+                                            <th>Nombre</th>
+                                            <th>Apellido Paterno</th>
+                                            <th>Apellido Materno</th> 
+                                            <th>Cuatrimestre</th>
+                                            <th>Correo</th>
+                                            <th>Contraseña</th>
+                                            <th>Carrera</th>
+                                            <th>Usuario</th>
+                                            <th>Eliminar</th>
 
 
-</div>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>ID usuario</th>
+                                            <th>Nombre</th>
+                                            <th>Apellido Paterno</th>
+                                            <th>Apellido Materno</th> 
+                                            <th>Cuatrimestre</th>
+                                            <th>Correo</th>
+                                            <th>Contraseña</th>
+                                            <th>Carrera</th>
+                                            <th>Usuario</th>
+                                            <th>Eliminar</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <?php
+
+                                            if ($resultado = $conexion->query($consultaus)) {
+
+                                                /* obtener el array de objetos */
+                                                while ($obj = $resultado->fetch_object()) {
+                                    ?>
+                                            <tr>
+                                                <td><?= $obj->idusuario ?></td>
+                                                <td><?= $obj->nombreus?></td>
+                                                <td><?= $obj->apellidopatus ?></td>
+                                                <td><?= $obj->apellidomatus?></td>
+                                                <td><?= $obj->cuatri ?></td>
+                                                <td><?= $obj->correo?></td>
+                                                <td><?= $obj->contraseña ?></td>
+                                                <td><?= $obj->carrera?></td>
+                                                <td><?= $obj->usuario ?></td>
+                                    
+                                                </td>
+                                            </tr>
+                                            
+                                           
+                                                
+                                                
+                                        <?php
+                                                  
+                                            
+                                        }
+
+                                           /* liberar el conjunto de resultados */
+                                           //$resultado->close();
+                                        }
+                                        ?>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
             <!-- End of Main Content -->
 
             <?php

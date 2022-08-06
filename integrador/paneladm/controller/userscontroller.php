@@ -1,6 +1,8 @@
 <?php
 
-include ('/BD/conexion.php')
-$consulta= "SELECT * FROM usuarios";
+include ('/BD/conexion.php');
+$consultaus = "SELECT * FROM usuarios";
 
 ?>
+
+
