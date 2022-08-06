@@ -42,35 +42,37 @@ include './layauts/menunavbar.php'
                     <div class="row">
 
                         <!-- Contenidoo xd  -->
-                        <div class="col-lg-8 mb-4">
+                        <div class="col-lg-6 mb-4">
                         </div>
 
                         
 
-                        <form class="row g-3 text-center">
+                        <form class="col-12 text-center">
 
-                          <div class="col-8  ">
+                        
+                          <div class="col-4 offset-4">
                             <label for="nomjuego" class="form-label">Nombre del Juego</label>
                             <input type="text" class="form-control" id="nomjuego" placeholder="Asigne nombre del juego">
                           </div>
-                          <div class="col-8  ">
+                          <div class="col-4 offset-4 ">
                             <label for="versionjuego" class="form-label">Version de juego</label>
                             <input type="text" class="form-control" id="versionjuego" placeholder="Poner la version del juego">
                           </div>
-                          <div class="col-8">
+                          <div class="col-4 offset-4">
                             <label for="consola" class="form-label">Consola</label>
                             <input type="text" class="form-control" id="consola" placeholder="Agrega la consola para el juego">
-                          <div class="col-8">
+                          <div class="col-8 offset-2">
                               <label for="añodejuego" class="form-label">Año del juego</label>
                               <input type="text" class="form-control" id="añodejuego" placeholder="Agrega el año del juego">
 
                             </div>
-                            <div class="col-8">
+                            <div class="col-8 offset-2">
                               <label for="idcategoria" class="form-label">Id categoria</label>
                               <input type="text" class="form-control" id="idcategoria" placeholder="Agrega el id de la cateforia correspondiente">
 
                             </div>
-                          <div class="col-md-3 text-center">
+                            <br><br>
+                          <div class="col-4 text-center offset-4">
                               <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Crear Evento(s)</a>
                               
                             </div>                    

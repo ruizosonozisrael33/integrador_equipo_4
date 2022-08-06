@@ -86,12 +86,12 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCate"
             aria-expanded="true" aria-controls="collapseCate">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Categorias de juego</span>
+            <span>Categorias de juegos</span>
         </a>
         <div id="collapseCate" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Pantallas</h6>
-                <a class="collapse-item" href="#">Agregar Categoria de juego</a>
+                <a class="collapse-item" href="crearcatjuegos.php">Agregar Categoria de juego</a>
                 <a class="collapse-item" href="tablacatjuego.php">Tabla de Categorias</a>
             </div>
         </div>
@@ -107,8 +107,8 @@
         <div id="collapseResul" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Pantallas</h6>
-                <a class="collapse-item" href="#">Agregar Resultados</a>
-                <a class="collapse-item" href="#">Tabla de Resultados</a>
+                <a class="collapse-item" href="agregarresul.php">Agregar Resultados</a>
+                <a class="collapse-item" href="tablaresul.php">Tabla de Resultados</a>
             </div>
         </div>
     </li>
@@ -123,20 +123,12 @@
         <div id="collapsePartisi" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Pantallas</h6>
-                <a class="collapse-item" href="#">Agregar Participante</a>
-                <a class="collapse-item" href="#">Tabla de Participantes</a>
+                <a class="collapse-item" href="agregarparticip.php">Agregar Participante</a>
+                <a class="collapse-item" href="tablaparticip.php">Tabla de Participantes</a>
             </div>
         </div>
     </li>
 
-
-
-    <!-- Nav Item - Exit -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Salir</span></a>
-    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
@@ -202,7 +194,6 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nombre de usuario</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>

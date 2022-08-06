@@ -43,37 +43,27 @@ include './layauts/menunavbar.php'
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Datos de la tabla categoria de juegos  </h6>
     </div>
-    <div class="col-md-3">
-        <a type="text" class="btn btn-success" tabindex="-1" role="button" href="creaevento.php">Crear Evento(s)</a>  
+        <div class="col-md-8 ">
+            <a type="text" class="btn btn-success" tabindex="-1" role="button" href="crearcatjuegos.php">Crear Categoria</a>  
         </div> 
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Nombre Evento</th>
-                        <th>id evento</th>
-                        <th>Descripcion</th>
-                        <th>Fecha</th>
-                        <th>Lugar</th>
-                      
-                        
+                        <th>ID Categoria</th>
+                        <th>Nombre Categoria</th>  
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                        <th>Nombre</th>
-                        <th>id evento</th>
-                        <th>Descripcion</th>
-                        <th>Fecha</th>
-                        <th>Lugar</th>
-        
-                        
-                       </tr>
-</tfoot>
-                
+                        <th>ID Categoria</th>
+                        <th>Nombre Categoria</th>                     
+                    </tr>
+                </tfoot>
 
-
+         </div>
+    </div>
 </div>
             <!-- End of Main Content -->
 
