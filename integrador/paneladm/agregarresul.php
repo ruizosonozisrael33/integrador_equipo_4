@@ -34,7 +34,7 @@ include './layauts/menunavbar.php'
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Agregar Juegos</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Agregar Resultados</h1>
                     </div>
 
 
@@ -50,33 +50,33 @@ include './layauts/menunavbar.php'
                         <form class="row g-3">
 
                         
-                          <div class="col-6 ">
-                            <label for="nomjuego" class="form-label">Nombre del Juego</label>
-                            <input type="text" class="form-control" id="nomjuego" placeholder="Asigne nombre del juego">
+                          <div class="col-4 ">
+                            <label for="idresul" class="form-label">ID resultado</label>
+                            <input type="text" class="form-control" id="idresul" placeholder="agrege el id del resultado">
                           </div>
-                          <div class="col-6 ">
-                            <label for="versionjuego" class="form-label">Version de juego</label>
-                            <input type="text" class="form-control" id="versionjuego" placeholder="Poner la version del juego">
+                          <div class="col-8  ">
+                            <label for="nombreeve" class="form-label">Nombre Evento</label>
+                            <input type="text" class="form-control" id="nombreeve" placeholder="nombre del evento">
                           </div>
                           <div class="col-4 ">
-                            <label for="consola" class="form-label">Consola</label>
-                            <input type="text" class="form-control" id="consola" placeholder="Agrega la consola para el juego">
-                         </div>
+                            <label for="usuario" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="usuario" placeholder="escriba el nombre del usuario">
+                            </div>
                             <div class="col-4 ">
-                              <label for="añodejuego" class="form-label">Año del juego</label>
-                              <input type="text" class="form-control" id="añodejuego" placeholder="Agrega el año del juego">
+                              <label for="fecha" class="form-label">Fecha</label>
+                              <input type="text" class="form-control" id="fecha" placeholder="agrege la fecha">
 
                             </div>
                             <div class="col-4 ">
-                              <label for="idcategoria" class="form-label">Id categoria</label>
-                              <input type="text" class="form-control" id="idcategoria" placeholder="Agrega el id de la cateforia correspondiente">
+                              <label for="idevento" class="form-label">Id Evento</label>
+                              <input type="text" class="form-control" id="idevento" placeholder="coloque el id del evneto">
 
                             </div>
                             <br><br><br><br>
-                            <div class="col-md-12 text-center">
-                              <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Agregar Juego</a>
+                          <div class="col-12 text-center ">
+                              <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Agregar Resultado</a>
                               
-                            </div>                   
+                            </div>                    
 </form>
 
 

@@ -57,7 +57,6 @@ include './layauts/menunavbar.php'
                             <label for="nombrecat" class="form-label">Nombre de la Categoria</label>
                             <input type="text" class="form-control" id="nombrecat" placeholder="Asigne nombre de la categoria">
                           </div>
-
                            <br><br>
                           <div class="col-4 text-center offset-4">
                               <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Crear Categoria</a>

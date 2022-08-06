@@ -49,35 +49,35 @@ include './layauts/menunavbar.php'
                         <form class="row g-3">
 
     <div class="col-4">
-      <label for="nombre" class="form-label">Nombre(s)</label>
-      <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre">
+      <label for="nombreus" class="form-label">Nombre(s)</label>
+      <input type="text" class="form-control" id="nombreus" placeholder="Escribe el nombre">
     </div>
     <div class="col-4">
-      <label for="apellidop" class="form-label">Primer Apellido</label>
-      <input type="text" class="form-control" id="apellidop" placeholder="Escribir primer Apellido">
+      <label for="apellidopatus" class="form-label">Primer Apellido</label>
+      <input type="text" class="form-control" id="apellidopatus" placeholder="Escribir primer Apellido">
     </div>
     <div class="col-4">
-      <label for="apellidomat" class="form-label">Segundo Apellido</label>
-      <input type="text" class="form-control" id="apellidomat" placeholder="Escribir segundo Apellido">
+      <label for="apellidomatus" class="form-label">Segundo Apellido</label>
+      <input type="text" class="form-control" id="apellidomatus" placeholder="Escribir segundo Apellido">
     </div>
     <div class="col-md-4">
       <label for="cuatri" class="form-label">Cuatrimestre</label>
-      <input type="text" class="form-control" id="cuatri" placeholder="Coloca tu cuatrimestre actual en letras">
+      <input type="text" class="form-control" id="cuatri" placeholder="Coloca el cuatrimestre actual en letras">
     </div>
     <div class="col-md-8">
       <label for="correo" class="form-label">Correo</label>
       <input type="email" class="form-control" id="correo" placeholder="almatricula@gmail.com">
     </div>
     <div class="col-md-5">
-      <label for="password" class="form-label">Contraseña</label>
-      <input type="password" class="form-control" id="password" placeholder="Escribe una contraseña de 8 caracteres">
+      <label for="contraseña" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="contraseña" placeholder="Escribe una contraseña de 8 caracteres">
     </div>
     <div class="col-md-7">
       <label for="carrera" class="form-label">Carrera</label>
       <select id="carrera" class="form-select">
-        <option selected>Selecciona tu carrera </option>
-        <option>Tecnologias de la informacion y comunicacion area de Desarrollo de Software Multiplataforma</option>
-        <option>Tecnologias de la informacion y comunicacion area Infraestructura de Redes Digitales </option>
+        <option selected>Selecciona la carrera </option>
+        <option>TICs area de Desarrollo de Software Multiplataforma</option>
+        <option>TICs area Infraestructura de Redes Digitales </option>
         <option>Mantenimiento Industrial </option>
         <option>Negocios area Ventas </option>
         <option>Negocios area Mercadotecnia </option>
@@ -87,8 +87,8 @@ include './layauts/menunavbar.php'
       </select>
     </div>
     <div class="col-md-5">
-      <label for="nomusuario" class="form-label">Usuario</label>
-      <input type="text" class="form-control" id="nomusuario" placeholder="Coloca un nombre de ususario de 10 caracteres">
+      <label for="usuario" class="form-label">Usuario</label>
+      <input type="text" class="form-control" id="usuario" placeholder="Coloca un nombre de ususario de 10 caracteres">
     </div>
 
     <div class="col-12 text-center">
@@ -100,7 +100,7 @@ include './layauts/menunavbar.php'
       </div>
     </div>
     <div class="col-12 text-center">
-      <button type="submit" class="btn btn-success">Registrarse</button>
+      <button type="submit" class="btn btn-success">Registrar</button>
     </div>
   </form>
 

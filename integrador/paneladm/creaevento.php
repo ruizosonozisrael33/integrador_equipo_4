@@ -49,36 +49,25 @@ include './layauts/menunavbar.php'
 
                         <form class="row g-3">
 
-                          <div class="col-4 ">
-                            <label for="nombre" class="form-label">Nombre del Evento</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Asigne nombre a su Evento">
+                          <div class="col-6 ">
+                            <label for="nombreeve" class="form-label">Nombre del Evento</label>
+                            <input type="text" class="form-control" id="nombreeve" placeholder="Asigne nombre del evento">
                           </div>
-                          <div class="col-4">
-                            <label for="apellidop" class="form-label">Codigo Acceso</label>
-                            <input type="text" class="form-control" id="apellidop" placeholder="Access code">
+                          <div class="col-6">
+                            <label for="lugareve" class="form-label">Lugar de Evento</label>
+                            <input type="text" class="form-control" id="lugareve" placeholder="*online*">
                           </div>
-                          <div class="col-4 ">
-                            <label for="apellidomat" class="form-label">Numero de Participantes</label>
-                            <input type="text" class="form-control" id="apellidomat" placeholder="Participantes del equipo">
+                          
+                          <div class="col-6 ">
+                            <label for="fecha" class="form-label">Fecha</label>
+                            <input type="text" class="form-control" id="fecha" placeholder="fecha del evento">
                           </div>
-                          <div class="col-4">
-                            <label for="cuatri" class="form-label">Nombre del Juego</label>
-                            <input type="text" class="form-control" id="cuatri" placeholder="Juego a participar">
+                          <div class="col-6">
+                            <label for="nomjuego" class="form-label">Nombre del Juego</label>
+                            <input type="text" class="form-control" id="nomjuego" placeholder="nombre del juego que se jugara">
                           </div>
-                          <select id="categoria" class="form-select">
-                              <option selected>Selecciona la categoria </option>
-                              <option>First Person Shoter</option>
-                              <option>Carreras </option>
-                              <option>Deportes </option>
-                              <option>Acción </option>
-                      
-                            </select>
-                          </div>
-                          <div class="mb-3">
-                              <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
-                          <div class="col-md-3 text-center">
+                    <br><br><br><br>
+                          <div class="col-md-12 text-center">
                               <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Crear Evento(s)</a>
                               
                             </div>                    
