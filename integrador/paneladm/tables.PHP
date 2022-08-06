@@ -65,7 +65,7 @@ include './controller/userscontroller.php';
                                             <th>Contraseña</th>
                                             <th>Carrera</th>
                                             <th>Usuario</th>
-                                            <th>Eliminar</th>
+                                           
 
 
                                         </tr>
@@ -81,7 +81,7 @@ include './controller/userscontroller.php';
                                             <th>Contraseña</th>
                                             <th>Carrera</th>
                                             <th>Usuario</th>
-                                            <th>Eliminar</th>
+                                           
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -124,10 +124,15 @@ include './controller/userscontroller.php';
                                 </table>
                             </div>
                         </div>
+                                                   
 
             <!-- End of Main Content -->
 
             <?php
+
+
+
+
 include './layauts/allfooter.php'
 ?>
 

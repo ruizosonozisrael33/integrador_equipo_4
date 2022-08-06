@@ -1,3 +1,6 @@
+<?php
+include_once ('../BD/conexion.php')
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +28,8 @@
 <body id="page-top">
 
 <?php
-include './layauts/menunavbar.php'
+include './layauts/menunavbar.php';
+include './controller/categcontroller.php';
     ?>
 
 
@@ -46,24 +50,62 @@ include './layauts/menunavbar.php'
         <div class="col-md-8 ">
             <a type="text" class="btn btn-success" tabindex="-1" role="button" href="crearcatjuegos.php">Crear Categoria</a>  
         </div> 
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>ID Categoria</th>
-                        <th>Nombre Categoria</th>  
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>ID Categoria</th>
-                        <th>Nombre Categoria</th>                     
-                    </tr>
-                </tfoot>
+        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID Categoria</th>
+                                            <th>Nombre de la Categoria</th>
+                                           
+                                           
 
-         </div>
-    </div>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>ID Categoria</th>
+                                            <th>Nombre de la Categoria</th>
+                                         
+
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <?php
+
+                                            if ($resultado = $conexion->query($consultacat)) {
+
+                                                /* obtener el array de objetos */
+                                                while ($obj = $resultado->fetch_object()) {
+                                    ?>
+                                            <tr>
+                                                <td><?= $obj->idcategoria ?></td>
+                                                <td><?= $obj->nombrecat?></td>
+                                               
+                                                
+                                        
+                                    
+                                                </td>
+                                            </tr>
+                                            
+                                           
+                                                
+                                                
+                                        <?php
+                                                  
+                                            
+                                        }
+
+                                           /* liberar el conjunto de resultados */
+                                           //$resultado->close();
+                                        }
+                                        ?>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 </div>
             <!-- End of Main Content -->
 

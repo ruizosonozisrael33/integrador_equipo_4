@@ -1,7 +1,6 @@
 <?php
 
-include ('/BD/conexion.php');
-$consultaus = "SELECT * FROM usuarios";
+$consultaus= "SELECT * FROM usuarios";
 
 ?>
 

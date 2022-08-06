@@ -34,7 +34,8 @@ include_once ('../BD/conexion.php')
 <body id="page-top">
 
 <?php
-include './layauts/menunavbar.php'
+include './layauts/menunavbar.php';
+include './controller/resultcontroller.php';
     ?>
 
 
@@ -55,37 +56,72 @@ include './layauts/menunavbar.php'
     <div class="col-md-3">
         <a type="text" class="btn btn-success" tabindex="-1" role="button" href="agregarresul.php">Agregar Resultado</a>  
         </div> 
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>ID Resultado</th>
-                        <th>Nombre del Evento</th>
-                        <th>Usuario</th>
-                        <th>Fecha</th>
-                        <th>Id del evento</th>
-                       
-                      
-                        
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>x</th>
-                        <th>x</th>
-                        <th>x</th>
-                        <th>x</th>
-                        <th>x</th>
-                        
         
-                        
-                       </tr>
-</tfoot>
-            
 
 
-</div>
+        <!--card tablas -->
+        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID Resultado</th>
+                                            <th>Nombre de evento</th>
+                                            <th>Usuario</th>
+                                            <th>fecha</th> 
+                                            <th>ID Evento</th>
+                                           
+
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>ID Resultado</th>
+                                            <th>Nombre de evento</th>
+                                            <th>Usuario</th>
+                                            <th>fecha</th> 
+                                            <th>ID Evento</th>
+
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <?php
+
+                                            if ($resultado = $conexion->query($consultaresul)) {
+
+                                                /* obtener el array de objetos */
+                                                while ($obj = $resultado->fetch_object()) {
+                                    ?>
+                                            <tr>
+                                                <td><?= $obj->idresul ?></td>
+                                                <td><?= $obj->nombreeve?></td>
+                                                <td><?= $obj->usuario ?></td>
+                                                <td><?= $obj->fecha?></td>
+                                                <td><?= $obj->idevento ?></td>
+                                                
+                                        
+                                    
+                                                </td>
+                                            </tr>
+                                            
+                                           
+                                                
+                                                
+                                        <?php
+                                                  
+                                            
+                                        }
+
+                                           /* liberar el conjunto de resultados */
+                                           //$resultado->close();
+                                        }
+                                        ?>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
             <!-- End of Main Content -->
 
             <?php

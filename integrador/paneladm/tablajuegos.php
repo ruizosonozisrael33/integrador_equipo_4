@@ -34,7 +34,8 @@ include_once ('../BD/conexion.php')
 <body id="page-top">
 
 <?php
-include './layauts/menunavbar.php'
+include './layauts/menunavbar.php';
+include './controller/juegoscontroller.php';
     ?>
 
 
@@ -55,33 +56,72 @@ include './layauts/menunavbar.php'
     <div class="col-md-3">
         <a type="text" class="btn btn-success" tabindex="-1" role="button" href="agregarjuego.php">Agregar Juego(s)</a>  
         </div> 
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>ID Juego</th>
-                        <th>Nombre de Juego</th>
-                        <th>Version de juego</th>
-                        <th>Consola</th>
-                        <th>Año de juego</th>
-                        <th>Nombre Categoria</th>
-                      
-                        
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>x</th>
-                        <th>x</th>
-                        <th>c</th>
-                        <th>x</th>
-                        <th>x</th>
-                        <th>x</th>
-        
-                        
-                       </tr>
-</tfoot>
+
+        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID Juego</th>
+                                            <th>Nombre de Juego</th>
+                                            <th>Version de juego</th>
+                                            <th>Consola</th> 
+                                            <th>Año de Juego</th>
+                                            <th>ID Categoria</th>
+                                           
+
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>ID Juego</th>
+                                            <th>Nombre de Juego</th>
+                                            <th>Version de juego</th>
+                                            <th>Consola</th> 
+                                            <th>Año de Juego</th>
+                                            <th>ID Categoria</th>
+
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <?php
+
+                                            if ($resultado = $conexion->query($consultajueg)) {
+
+                                                /* obtener el array de objetos */
+                                                while ($obj = $resultado->fetch_object()) {
+                                    ?>
+                                            <tr>
+                                                <td><?= $obj->idjuego ?></td>
+                                                <td><?= $obj->nomjuego?></td>
+                                                <td><?= $obj->versionjuego ?></td>
+                                                <td><?= $obj->consola?></td>
+                                                <td><?= $obj->añodejuego ?></td>
+                                                <td><?= $obj->idcategoria ?></td>
+                                                
+                                        
+                                    
+                                                </td>
+                                            </tr>
+                                            
+                                           
+                                                
+                                                
+                                        <?php
+                                                  
+                                            
+                                        }
+
+                                           /* liberar el conjunto de resultados */
+                                           //$resultado->close();
+                                        }
+                                        ?>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
             
 
 
