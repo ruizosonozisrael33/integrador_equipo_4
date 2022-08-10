@@ -28,7 +28,7 @@ include_once('../BD/conexion.php');
 <body id="page-top">
 
 <?php
-include './layauts/menunavbar.php'
+include './layauts/menunavbar.php';
     ?>
 
 
