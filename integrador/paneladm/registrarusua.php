@@ -49,7 +49,8 @@ include './layauts/menunavbar.php';
                         </div>
 
                                            
-                        <form class="row g-3">
+                        <form class="row g-3" action='./class/addusclas.php' method="POST" >
+                         
 
     <div class="col-4">
       <label for="nombreus" class="form-label">Nombre(s)</label>
@@ -91,7 +92,7 @@ include './layauts/menunavbar.php';
     </div>
     <div class="col-md-5">
       <label for="usuario" class="form-label">Usuario</label>
-      <input type="text" class="form-control" id="usuario" placeholder="Coloca un nombre de ususario de 10 caracteres">
+      <input type="text" class="form-control" id="usuario" placeholder="Coloca un nombre de ususario de 6 caracteres">
     </div>
 
     <div class="col-12 text-center">
