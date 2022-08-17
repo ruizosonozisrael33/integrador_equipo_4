@@ -47,21 +47,19 @@ include './layauts/menunavbar.php'
 
                         
 
-                        <form class="col-12">
+                        <form class="col-12" action='./class/addcategclass.php' method="POST" >
 
-                          <div class="col-8 offset-2">
-                            <label for="idcategoria" class="form-label">ID categoria</label>
-                            <input type="text" class="form-control" id="idcategoria" >
-                          </div>
+                          
                           <div class="col-8 offset-2 ">
                             <label for="nombrecat" class="form-label">Nombre de la Categoria</label>
-                            <input type="text" class="form-control" id="nombrecat" placeholder="Asigne nombre de la categoria">
+                            <input type="text" class="form-control" name='nombrecat' id="nombrecat" placeholder="Asigne nombre de la categoria">
                           </div>
+
                            <br><br>
-                          <div class="col-4 text-center offset-4">
-                              <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Crear Categoria</a>
-                              
-                            </div>                    
+                           </div>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-success">Agregar</button>
+    </div>                    
 </form>
 
 

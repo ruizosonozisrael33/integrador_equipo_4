@@ -47,36 +47,36 @@ include './layauts/menunavbar.php'
 
                         
 
-                        <form class="row g-3">
+                        <form class="row g-3" action='./class/addjuegclass.php' method="POST" >
 
                         
                           <div class="col-6 ">
                             <label for="nomjuego" class="form-label">Nombre del Juego</label>
-                            <input type="text" class="form-control" id="nomjuego" placeholder="Asigne nombre del juego">
+                            <input type="text" class="form-control" name='nomjuego' id="nomjuego" placeholder="Asigne nombre del juego">
                           </div>
                           <div class="col-6 ">
                             <label for="versionjuego" class="form-label">Version de juego</label>
-                            <input type="text" class="form-control" id="versionjuego" placeholder="Poner la version del juego">
+                            <input type="text" class="form-control" name='versionjuego' id="versionjuego" placeholder="Poner la version del juego">
                           </div>
                           <div class="col-4 ">
                             <label for="consola" class="form-label">Consola</label>
-                            <input type="text" class="form-control" id="consola" placeholder="Agrega la consola para el juego">
+                            <input type="text" class="form-control" name='consola' id="consola" placeholder="Agrega la consola para el juego">
                          </div>
                             <div class="col-4 ">
                               <label for="añodejuego" class="form-label">Año del juego</label>
-                              <input type="text" class="form-control" id="añodejuego" placeholder="Agrega el año del juego">
+                              <input type="text" class="form-control" name='añodejuego' id="añodejuego" placeholder="Agrega el año del juego">
 
                             </div>
                             <div class="col-4 ">
                               <label for="idcategoria" class="form-label">Id categoria</label>
-                              <input type="text" class="form-control" id="idcategoria" placeholder="Agrega el id de la cateforia correspondiente">
+                              <input type="text" class="form-control" name='idcategoria' id="idcategoria" placeholder="Agrega el id de la cateforia correspondiente">
 
                             </div>
                             <br><br><br><br>
-                            <div class="col-md-12 text-center">
-                              <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Agregar Juego</a>
-                              
-                            </div>                   
+                            </div>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-success">Crear</button>
+    </div>                   
 </form>
 
 

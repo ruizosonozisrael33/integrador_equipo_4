@@ -54,7 +54,7 @@ include './controller/participcontroller.php';
         <h6 class="m-0 font-weight-bold text-primary">Datos de la Tabla Participantes</h6>
     </div>
     <div class="col-md-3">
-        <a type="text" class="btn btn-success" tabindex="-1" role="button" href="agregarresul.php">Agregar Participante</a>  
+        <a type="text" class="btn btn-success" tabindex="-1" role="button" href="agregarparticip.php">Agregar Participante</a>  
         </div> 
    
         <div class="card-body">

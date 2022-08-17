@@ -47,30 +47,30 @@ include './layauts/menunavbar.php'
 
                         
 
-                        <form class="row g-3">
+                        <form class="row g-3" action='./class/addeveclass.php' method="POST" >
 
                           <div class="col-6 ">
                             <label for="nombreeve" class="form-label">Nombre del Evento</label>
-                            <input type="text" class="form-control" id="nombreeve" placeholder="Asigne nombre del evento">
+                            <input type="text" class="form-control" name='nombreeve' id="nombreeve" placeholder="Asigne nombre del evento">
                           </div>
                           <div class="col-6">
                             <label for="lugareve" class="form-label">Lugar de Evento</label>
-                            <input type="text" class="form-control" id="lugareve" placeholder="*online*">
+                            <input type="text" class="form-control" name='lugareve' id="lugareve" placeholder="*online*">
                           </div>
                           
                           <div class="col-6 ">
                             <label for="fecha" class="form-label">Fecha</label>
-                            <input type="text" class="form-control" id="fecha" placeholder="fecha del evento">
+                            <input type="text" class="form-control" name='fecha' id="fecha" placeholder="	año -mes-dia">
                           </div>
                           <div class="col-6">
                             <label for="nomjuego" class="form-label">Nombre del Juego</label>
-                            <input type="text" class="form-control" id="nomjuego" placeholder="nombre del juego que se jugara">
+                            <input type="text" class="form-control" name='nomjuego' id="nomjuego" placeholder="nombre del juego que se jugara">
                           </div>
                     <br><br><br><br>
-                          <div class="col-md-12 text-center">
-                              <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Crear Evento(s)</a>
-                              
-                            </div>                    
+                    </div>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-success">Crear Evento</button>
+    </div>                   
 </form>
 
 

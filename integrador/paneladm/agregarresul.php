@@ -47,36 +47,33 @@ include './layauts/menunavbar.php'
 
                         
 
-                        <form class="row g-3">
+                        <form class="row g-3" action='./class/addresulclass.php' method="POST" >
 
                         
-                          <div class="col-4 ">
-                            <label for="idresul" class="form-label">ID resultado</label>
-                            <input type="text" class="form-control" id="idresul" placeholder="agrege el id del resultado">
-                          </div>
+                          
                           <div class="col-8  ">
                             <label for="nombreeve" class="form-label">Nombre Evento</label>
-                            <input type="text" class="form-control" id="nombreeve" placeholder="nombre del evento">
+                            <input type="text" class="form-control" id="nombreeve" name='nombreeve' placeholder="nombre del evento">
                           </div>
                           <div class="col-4 ">
                             <label for="usuario" class="form-label">Usuario</label>
-                            <input type="text" class="form-control" id="usuario" placeholder="escriba el nombre del usuario">
+                            <input type="text" class="form-control" id="usuario" name='usuario' placeholder="escriba el nombre del usuario">
                             </div>
                             <div class="col-4 ">
                               <label for="fecha" class="form-label">Fecha</label>
-                              <input type="text" class="form-control" id="fecha" placeholder="agrege la fecha">
+                              <input type="text" class="form-control" id="fecha" name='fecha' placeholder="agrege la fecha">
 
                             </div>
                             <div class="col-4 ">
                               <label for="idevento" class="form-label">Id Evento</label>
-                              <input type="text" class="form-control" id="idevento" placeholder="coloque el id del evneto">
+                              <input type="text" class="form-control" id="idevento" name='idevento' placeholder="coloque el id del evneto">
 
                             </div>
                             <br><br><br><br>
-                          <div class="col-12 text-center ">
-                              <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Agregar Resultado</a>
-                              
-                            </div>                    
+                            </div>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-success">Registrar resultado</button>
+    </div>                   
 </form>
 
 

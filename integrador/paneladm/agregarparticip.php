@@ -47,42 +47,38 @@ include './layauts/menunavbar.php'
 
                         
 
-                        <form class="row g-3">
+                        <form class="row g-3" action='./class/addparticipclass.php' method="POST" >
 
                         
-                          <div class="col-6 ">
-                            <label for="idparticipante" class="form-label">ID Participante</label>
-                            <input type="text" class="form-control" id="idparticipante" placeholder="agrege el id del resultado">
-                          </div>
                           <div class="col-6  ">
                             <label for="nombrejuego" class="form-label">Nombre Juego</label>
-                            <input type="text" class="form-control" id="nombrejuego" placeholder="nombre del evento">
+                            <input type="text" class="form-control" id="nombrejuego" name='nombrejuego' placeholder="nombre del juego">
                           </div>
                           <div class="col-6 ">
                             <label for="nombreus" class="form-label">Nombre de Usuario</label>
-                            <input type="text" class="form-control" id="nombreus" placeholder="escriba el nombre del usuario">
+                            <input type="text" class="form-control" id="nombreus" name='nombreus' placeholder="escriba el nombre del usuario">
                             </div>
                             <div class="col-6 ">
                               <label for="nombreeve" class="form-label">Nombre de Evento</label>
-                              <input type="text" class="form-control" id="nombreeve" placeholder="agrege la fecha">
+                              <input type="text" class="form-control" id="nombreeve" name='nombreeve' placeholder="agrega el nombre del evento">
 
                             </div>
                             <div class="col-6 ">
                               <label for="fecha" class="form-label">Fecha</label>
-                              <input type="text" class="form-control" id="fecha" placeholder="coloque el id del evneto">
+                              <input type="text" class="form-control" id="fecha" name='fecha' placeholder="año-mes-dia">
 
                             </div>
                             
                             <div class="col-6 ">
                               <label for="idjuego" class="form-label">Id Juego</label>
-                              <input type="text" class="form-control" id="idjuego" placeholder="coloque el id del evneto">
+                              <input type="text" class="form-control" id="idjuego" name='idjuego' placeholder="coloque el id del juego">
 
                             </div>
                             <br><br><br><br>
-                          <div class="col-12 text-center ">
-                              <a type="submint" class="btn btn-success" tabindex="-1" role="button" >Agregar Participante</a>
-                              
-                            </div>                    
+                            </div>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-success">Agregar</button>
+    </div>                   
 </form>
 
 
