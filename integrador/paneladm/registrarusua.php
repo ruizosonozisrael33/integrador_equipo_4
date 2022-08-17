@@ -1,6 +1,4 @@
-<?php
-include_once('../BD/conexion.php');
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 

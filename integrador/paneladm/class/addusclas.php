@@ -1,27 +1,24 @@
 <?php
 include ('../../BD/conexion.php'); 
 
- //$request = ($_POST);
+ $request = ($_POST);
 
 
- $id = $_POST['idusuario'];
- $name = $_POST['nombreus'];
- $appaterno = $_POST['apellidopatus'];
- $apmaterno = $_POST['apellidomatus'];
- $cuatimestre = $_POST['cuatri'];
- $correo = $_POST['correo'];
- $contraseña = $_POST['contraseña'];
- $carrera = $_POST['carrera'];
- $usuario = $_POST['usuario'];
+ $nombreus=$_POST['nombreus'];
+ $apellidopatus=$_POST['apellidopatus'];
+ $apellidomatus=$_POST['apellidomatus'];
+ $cuatri=$_POST['cuatri'];
+ $correo=$_POST['correo'];
+ $contraseña=$_POST['contraseña'];
+ $carrera=$_POST['carrera'];
+ $usuario=$_POST['usuario'];
 
-
-
- $sqlquery = "INSERT INTO usuarios (nombreus, apellidopatus, apellidomatus, cuatri, correo, contrsaeña, carrera, usuario) VALUES('NULL','$name','$appaterno','$apmaterno','$cuatimestre','$correo','$contraseña','$carrera','$usuario')";
+ $sqlquery = "INSERT INTO usuarios (nombreus, apellidopatus, apellidomatus, cuatri, correo, contraseña, carrera, usuario) VALUES('$nombreus','$apellidopatus','$apellidomatus','$cuatri','$correo','$contraseña','$carrera','$usuario')";
  
- $result = mysqli_query($conexion,$sqlquery) or trigger_error("query fail sql-error". mysqli_error($conexion));
+ $result = mysqli_query($conexion, $sqlquery) or trigger_error("query fail sql-error". mysqli_error($conexion));
  
  if($result == 1){
-    echo "La direccion se dio de alta de manera existos";
+    echo "Se dio de alta de manera existo";
  }else{
     echo"ocurrio un error al realizar el registro";
  }
@@ -32,11 +29,10 @@ include ('../../BD/conexion.php');
         // Table
         private $db_table = "usuarios";
         // Columns
-        private $id; 
-        private $name;
-        private $appaterno; 
-        private $apmaterno;
-        private $cuatimestre;
+        private $nombreus;
+        private $apellidopatus; 
+        private $apellidomatus;
+        private $cuatri;
         private $correo;
         private $contraseña;
         private $carrera;
@@ -47,103 +43,131 @@ include ('../../BD/conexion.php');
             $this->conn = $conexion;
         }
         // GET ALL
-        public function getusuario(){
+        public function getUsuario(){
             $sqlQuery = "SELECT idusuario, nombreus, apellidopatus, apellidomatus, cuatri, correo, contrsaeña, carrera, usuario FROM " . $this->db_table . "";
             $stmt = $this->conn->prepare($sqlQuery);
             $stmt->execute();
             return $stmt;
         }
         // CREATE
-        public function createusuario($request ){
+        public function createUsuario($request ){
 
             $sqlQuery = "INSERT INTO
                         ". $this->db_table ."
                     SET
-                        name = :name, 
-                        email = :description
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                        idusuario = :null, 
+                        nombreus = :nombreus,
+                        apellidopatus = :apellidopatus,
+                        apellidomatus = :apellidomatus,
+                        cuatri = :cuatri,
+                        correo = :correo,
+                        contraseña = :contraseña,
+                        carrera = :carrera,
+                        usuario = :usuario                               
                         ";
         
             $stmt = $this->conn->prepare($sqlQuery);
         
             // sanitize
-            $this->name=htmlspecialchars(strip_tags($this->name));
-            $this->appaterno=htmlspecialchars(strip_tags($this->appaterno));
-            $this->appaterno=htmlspecialchars(strip_tags($this->appaterno));
-            $this->appaterno=htmlspecialchars(strip_tags($this->appaterno));
-            $this->appaterno=htmlspecialchars(strip_tags($this->appaterno));
+            $this->nombreus=htmlspecialchars(strip_tags($this->nombreus));
+            $this->apellidopatus=htmlspecialchars(strip_tags($this->apellidopatus));
+            $this->apellidomatus=htmlspecialchars(strip_tags($this->apellidomatus));
+            $this->cuatri=htmlspecialchars(strip_tags($this->cuatri));
+            $this->correo=htmlspecialchars(strip_tags($this->correo));
+            $this->contraseña=htmlspecialchars(strip_tags($this->contraseña));
+            $this->carrera=htmlspecialchars(strip_tags($this->carrera));
+            $this->usuario=htmlspecialchars(strip_tags($this->usuario));
+
 
         
             // bind data
-            $stmt->bindParam(":name", $this->name);
-            $stmt->bindParam(":email", $this->description);
-         
+            $stmt->bindParam(":nombreus", $this->nombreus);
+            $stmt->bindParam(":apellidopatus", $this->apellidopatus);
+            $stmt->bindParam(":apellidomatus", $this->apellidomatus);
+            $stmt->bindParam(":cuatri", $this->cuatri);
+            $stmt->bindParam(":correo", $this->correo);
+            $stmt->bindParam(":contraseña", $this->contraseña);
+            $stmt->bindParam(":carrera", $this->carrera);
+            $stmt->bindParam(":usuario", $this->usuario);
+
         
             if($stmt->execute()){
-                echo 'Employee created successfully.';
+                echo 'Creado exitosamente';
              }
-                echo 'Employee could not be created.';
+                echo 'No se pudo crear.';
             }
         // READ single
-        public function getSingleEmployee(){
+        public function getSingleUsuario(){
             $sqlQuery = "SELECT
-                        id, 
-                        name, 
-                        email, 
-                        age, 
-                        designation, 
-                        created
+                        idusuario, 
+                        nombreus, 
+                        apellidopatus, 
+                        apellidomatus, 
+                        cuatri, 
+                        correo,
+                        contraseña,
+                        carrera,
+                        usuario
                       FROM
                         ". $this->db_table ."
                     WHERE 
-                       id = ?
+                       idusuario = ?
                     LIMIT 0,1";
             $stmt = $this->conn->prepare($sqlQuery);
-            $stmt->bindParam(1, $this->id);
+            $stmt->bindParam(1, $this->idusuario);
             $stmt->execute();
             $dataRow = $stmt->fetch(PDO::FETCH_ASSOC);
             
-            $this->name = $dataRow['name'];
-            $this->email = $dataRow['email'];
-            $this->age = $dataRow['age'];
-            $this->designation = $dataRow['designation'];
-            $this->created = $dataRow['created'];
+            $this->idusuario = $dataRow['idusuario'];
+            $this->nombreus = $dataRow['nombreus'];
+            $this->apellidopatus = $dataRow['apellidopatus'];
+            $this->apellidomatus = $dataRow['apellidomatus'];
+            $this->cuatri = $dataRow['cuatri'];
+            $this->correo = $dataRow['correo'];
+            $this->contraseña = $dataRow['contraseña'];
+            $this->carrera = $dataRow['carrera'];
+            $this->usuario = $dataRow['usuario'];
+
+
         }        
         // UPDATE
-        public function updateEmployee(){
+        public function updateUsuario(){
             $sqlQuery = "UPDATE
                         ". $this->db_table ."
                     SET
-                        name = :name, 
-                        email = :email, 
-                        age = :age, 
-                        designation = :designation, 
-                        created = :created
+                    idusuario = :null, 
+                    nombreus = :nombreus,
+                    apellidopatus = :apellidopatus,
+                    apellidomatus = :apellidomatus,
+                    cuatri = :cuatri,
+                    correo = :correo,
+                    contraseña = :contraseña,
+                    carrera = :carrera,
+                    usuario = :usuario  
                     WHERE 
-                        id = :id";
+                        usuario = :usuario";
         
             $stmt = $this->conn->prepare($sqlQuery);
-        
-            $this->name=htmlspecialchars(strip_tags($this->name));
-            $this->email=htmlspecialchars(strip_tags($this->email));
-            $this->age=htmlspecialchars(strip_tags($this->age));
-            $this->designation=htmlspecialchars(strip_tags($this->designation));
-            $this->created=htmlspecialchars(strip_tags($this->created));
-            $this->id=htmlspecialchars(strip_tags($this->id));
+    
+            $this->nombreus=htmlspecialchars(strip_tags($this->nombreus));
+            $this->apellidopatus=htmlspecialchars(strip_tags($this->apellidopatus));
+            $this->apellidomatus=htmlspecialchars(strip_tags($this->apellidomatus));
+            $this->cuatri=htmlspecialchars(strip_tags($this->cuatri));
+            $this->correo=htmlspecialchars(strip_tags($this->correo));
+            $this->contraseña=htmlspecialchars(strip_tags($this->contraseña));
+            $this->carrera=htmlspecialchars(strip_tags($this->carrera));
+            $this->usuario=htmlspecialchars(strip_tags($this->usuario));
+
         
             // bind data
-            $stmt->bindParam(":name", $this->name);
-            $stmt->bindParam(":email", $this->email);
-            $stmt->bindParam(":age", $this->age);
-            $stmt->bindParam(":designation", $this->designation);
-            $stmt->bindParam(":created", $this->created);
-            $stmt->bindParam(":id", $this->id);
+            $stmt->bindParam(":nombreus", $this->nombreus);
+            $stmt->bindParam(":apellidopatus", $this->apellidopatus);
+            $stmt->bindParam(":apellidomatus", $this->apellidomatus);
+            $stmt->bindParam(":cuatri", $this->cuatri);
+            $stmt->bindParam(":correo", $this->correo);
+            $stmt->bindParam(":contraseña", $this->contraseña);
+            $stmt->bindParam(":carrera", $this->carrera);
+            $stmt->bindParam(":usuario", $this->usuario);
         
             if($stmt->execute()){
                return true;
@@ -151,13 +175,13 @@ include ('../../BD/conexion.php');
             return false;
         }
         // DELETE
-        function deleteEmployee(){
-            $sqlQuery = "DELETE FROM " . $this->db_table . " WHERE id = ?";
+        function deleteUsuario(){
+            $sqlQuery = "DELETE FROM " . $this->db_table . " WHERE nombreus = ?";
             $stmt = $this->conn->prepare($sqlQuery);
         
-            $this->id=htmlspecialchars(strip_tags($this->id));
+            $this->nombreus=htmlspecialchars(strip_tags($this->nombreus));
         
-            $stmt->bindParam(1, $this->id);
+            $stmt->bindParam(1, $this->nombreus);
         
             if($stmt->execute()){
                 return true;
