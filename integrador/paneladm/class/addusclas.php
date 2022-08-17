@@ -1,7 +1,7 @@
 <?php
 include ('../../BD/conexion.php'); 
 
- $request = ($_POST);
+  $request = ($_POST);
 
 
  $nombreus=$_POST['nombreus'];
@@ -13,9 +13,10 @@ include ('../../BD/conexion.php');
  $carrera=$_POST['carrera'];
  $usuario=$_POST['usuario'];
 
- $sqlquery = "INSERT INTO usuarios (nombreus, apellidopatus, apellidomatus, cuatri, correo, contraseña, carrera, usuario) VALUES('$nombreus','$apellidopatus','$apellidomatus','$cuatri','$correo','$contraseña','$carrera','$usuario')";
+
+ $sqlQuery= "INSERT INTO usuarios (nombreus, apellidopatus, apellidomatus, cuatri, correo, contraseña, carrera, usuario) VALUES('$nombreus','$apellidopatus','$apellidomatus','$cuatri','$correo','$contraseña','$carrera','$usuario')";
  
- $result = mysqli_query($conexion, $sqlquery) or trigger_error("query fail sql-error". mysqli_error($conexion));
+ $result = mysqli_query($conexion,$sqlQuery) or trigger_error("query fail sql-error". mysqli_error($conexion));
  
  if($result == 1){
     echo "Se dio de alta de manera existo";
@@ -176,12 +177,12 @@ include ('../../BD/conexion.php');
         }
         // DELETE
         function deleteUsuario(){
-            $sqlQuery = "DELETE FROM " . $this->db_table . " WHERE nombreus = ?";
+            $sqlQuery = "DELETE FROM " . $this->db_table . " WHERE idusuario = ?";
             $stmt = $this->conn->prepare($sqlQuery);
         
-            $this->nombreus=htmlspecialchars(strip_tags($this->nombreus));
+            $this->idusuario=htmlspecialchars(strip_tags($this->idusuario));
         
-            $stmt->bindParam(1, $this->nombreus);
+            $stmt->bindParam(1, $this->idusuario);
         
             if($stmt->execute()){
                 return true;

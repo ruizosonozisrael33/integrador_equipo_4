@@ -65,6 +65,7 @@ include './controller/userscontroller.php';
                                             <th>Contraseña</th>
                                             <th>Carrera</th>
                                             <th>Usuario</th>
+                                            <th>    </th>
                                            
 
 
@@ -81,6 +82,7 @@ include './controller/userscontroller.php';
                                             <th>Contraseña</th>
                                             <th>Carrera</th>
                                             <th>Usuario</th>
+                                            <th>    </th>
                                            
                                         </tr>
                                     </tfoot>
@@ -102,6 +104,7 @@ include './controller/userscontroller.php';
                                                 <td><?= $obj->contraseña ?></td>
                                                 <td><?= $obj->carrera?></td>
                                                 <td><?= $obj->usuario ?></td>
+                                                <!--<td><button type="delete" class="btn btn-danger" tabindex="-1" action='./class/addusclas.php'>Eliminar </button></td>-->
                                     
                                                 </td>
                                             </tr>
