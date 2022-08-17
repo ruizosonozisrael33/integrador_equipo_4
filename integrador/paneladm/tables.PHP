@@ -104,7 +104,7 @@ include './controller/userscontroller.php';
                                                 <td><?= $obj->contraseña ?></td>
                                                 <td><?= $obj->carrera?></td>
                                                 <td><?= $obj->usuario ?></td>
-                                                <!--<td><button type="delete" class="btn btn-danger" tabindex="-1" action='./class/addusclas.php'>Eliminar </button></td>-->
+                                                <td><button type="delete" class="btn btn-danger" tabindex="-1" >Eliminar </button></td>
                                     
                                                 </td>
                                             </tr>

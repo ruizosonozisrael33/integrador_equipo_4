@@ -177,7 +177,7 @@ include ('../../BD/conexion.php');
         }
         // DELETE
         function deleteUsuario(){
-            $sqlQuery = "DELETE FROM " . $this->db_table . " WHERE idusuario = ?";
+            $sqlQuery = "DELETE FROM " . $this->db_table . " WHERE idusuario = ? ";
             $stmt = $this->conn->prepare($sqlQuery);
         
             $this->idusuario=htmlspecialchars(strip_tags($this->idusuario));
