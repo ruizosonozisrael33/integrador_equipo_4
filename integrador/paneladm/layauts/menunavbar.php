@@ -130,6 +130,23 @@
     </li>
 
 
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseResp"
+            aria-expanded="true" aria-controls="collapseResp">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Respaldo de la BD</span>
+        </a>
+        <div id="collapseResp" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Pantallas</h6>
+                <a class="collapse-item" href="respaldobd.php">respaldo</a>
+                <a class="collapse-item" href="#">respaldooo</a>
+            </div>
+        </div>
+    </li>
+
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
