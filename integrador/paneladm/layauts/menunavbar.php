@@ -141,7 +141,6 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Pantallas</h6>
                 <a class="collapse-item" href="respaldobd.php">respaldo</a>
-                <a class="collapse-item" href="#">respaldooo</a>
             </div>
         </div>
     </li>
