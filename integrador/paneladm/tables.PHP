@@ -104,7 +104,13 @@ include './controller/userscontroller.php';
                                                 <td><?= $obj->contraseña ?></td>
                                                 <td><?= $obj->carrera?></td>
                                                 <td><?= $obj->usuario ?></td>
-                                                <td><button type="delete" class="btn btn-danger" tabindex="-1" >Eliminar </button></td>
+                                                <td>
+                                                <form action="./controller/deleteus.php" method="post">
+                                                <input type="hidden" name="delete_id" value="<?php echo $obj->idusuario ?>">
+                                                <button type="submit" name="delete_btn" class="btn btn-danger"> Eliminar</button>
+                                                </form>
+                                        
+                                                </td>
                                     
                                                 </td>
                                             </tr>

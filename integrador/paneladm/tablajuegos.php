@@ -68,6 +68,7 @@ include './controller/juegoscontroller.php';
                                             <th>Consola</th> 
                                             <th>Año de Juego</th>
                                             <th>ID Categoria</th>
+                                            <th>    </th>
                                            
 
                                         </tr>
@@ -80,6 +81,7 @@ include './controller/juegoscontroller.php';
                                             <th>Consola</th> 
                                             <th>Año de Juego</th>
                                             <th>ID Categoria</th>
+                                            <th>    </th>
 
                                         </tr>
                                     </tfoot>
@@ -98,7 +100,13 @@ include './controller/juegoscontroller.php';
                                                 <td><?= $obj->consola?></td>
                                                 <td><?= $obj->añodejuego ?></td>
                                                 <td><?= $obj->idcategoria ?></td>
-                                                
+                                                <td>
+                                                <form action="./controller/deletejueg.php" method="post">
+                                                <input type="hidden" name="delete_id" value="<?php echo $obj->idjuego ?>">
+                                                <button type="submit" name="delete_btn" class="btn btn-danger"> Eliminar</button>
+                                                </form>
+                                        
+                                                </td>
                                         
                                     
                                                 </td>

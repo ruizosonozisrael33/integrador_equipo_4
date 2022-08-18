@@ -70,7 +70,7 @@ include './controller/resultcontroller.php';
                                             <th>Usuario</th>
                                             <th>fecha</th> 
                                             <th>ID Evento</th>
-                                           
+                                            <th>    </th>
 
                                         </tr>
                                     </thead>
@@ -81,7 +81,7 @@ include './controller/resultcontroller.php';
                                             <th>Usuario</th>
                                             <th>fecha</th> 
                                             <th>ID Evento</th>
-
+                                            <th>    </th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -98,7 +98,13 @@ include './controller/resultcontroller.php';
                                                 <td><?= $obj->usuario ?></td>
                                                 <td><?= $obj->fecha?></td>
                                                 <td><?= $obj->idevento ?></td>
-                                                
+                                                <td>
+                                                <form action="./controller/deleteresul.php" method="post">
+                                                <input type="hidden" name="delete_id" value="<?php echo $obj->idresul ?>">
+                                                <button type="submit" name="delete_btn" class="btn btn-danger"> Eliminar</button>
+                                                </form>
+                                        
+                                                </td>
                                         
                                     
                                                 </td>

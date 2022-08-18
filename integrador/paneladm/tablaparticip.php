@@ -68,7 +68,7 @@ include './controller/participcontroller.php';
                                             <th>Nombre de Evento</th> 
                                             <th>Fecha</th>
                                             <th>ID de Juego</th>
-                                           
+                                            <th>    </th>
 
                                         </tr>
                                     </thead>
@@ -80,7 +80,7 @@ include './controller/participcontroller.php';
                                             <th>Nombre de Evento</th> 
                                             <th>Fecha</th>
                                             <th>ID de Juego</th>
-
+                                            <th>    </th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -98,7 +98,13 @@ include './controller/participcontroller.php';
                                                 <td><?= $obj->nombreeve?></td>
                                                 <td><?= $obj->fecha ?></td>
                                                 <td><?= $obj->idjuego ?></td>
-                                                
+                                                <td>
+                                                <form action="./controller/deleteparticip.php" method="post">
+                                                <input type="hidden" name="delete_id" value="<?php echo $obj->idparticipante ?>">
+                                                <button type="submit" name="delete_btn" class="btn btn-danger"> Eliminar</button>
+                                                </form>
+                                        
+                                                </td>
                                         
                                     
                                                 </td>

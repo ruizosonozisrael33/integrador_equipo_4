@@ -67,6 +67,7 @@ include './controller/eventoscontroller.php';
                                             <th>Lugar</th>
                                             <th>fecha</th> 
                                             <th>Nombre de Juego</th>
+                                            <th>    </th>
                                            
 
                                         </tr>
@@ -78,6 +79,7 @@ include './controller/eventoscontroller.php';
                                             <th>Lugar</th>
                                             <th>fecha</th> 
                                             <th>Nombre de Juego</th>
+                                            <th>    </th>
 
                                         </tr>
                                     </tfoot>
@@ -95,6 +97,13 @@ include './controller/eventoscontroller.php';
                                                 <td><?= $obj->lugareve ?></td>
                                                 <td><?= $obj->fecha?></td>
                                                 <td><?= $obj->nomjuego ?></td>
+                                                <td>
+                                                <form action="./controller/deleteeve.php" method="post">
+                                                <input type="hidden" name="delete_ideve" value="<?php echo $obj->idevento ?>">
+                                                <button type="submit" name="delete_btneve" class="btn btn-danger"> Eliminar</button>
+                                                </form>
+                                        
+                                                </td>
                                                 
                                         
                                     

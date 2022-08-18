@@ -57,7 +57,7 @@ include './controller/categcontroller.php';
                                         <tr>
                                             <th>ID Categoria</th>
                                             <th>Nombre de la Categoria</th>
-                                           
+                                            <th> </th>
                                            
 
                                         </tr>
@@ -66,7 +66,7 @@ include './controller/categcontroller.php';
                                         <tr>
                                             <th>ID Categoria</th>
                                             <th>Nombre de la Categoria</th>
-                                         
+                                            <th>   </th>
 
                                         </tr>
                                     </tfoot>
@@ -81,7 +81,13 @@ include './controller/categcontroller.php';
                                             <tr>
                                                 <td><?= $obj->idcategoria ?></td>
                                                 <td><?= $obj->nombrecat?></td>
-                                               
+                                                <td>
+                                                <form action="./controller/deletecat.php" method="post">
+                                                <input type="hidden" name="delete_id" value="<?php echo $obj->idcategoria ?>">
+                                                <button type="submit" name="delete_btn" class="btn btn-danger"> Eliminar</button>
+                                                </form>
+                                        
+                                                </td>
                                                 
                                         
                                     
