@@ -80,7 +80,7 @@ include './layauts/menunavbar.php';
       <select id="carrera" name='carrera' class="form-select">
         <option selected>Selecciona la carrera </option>
         <option>TICs area de Desarrollo de Software Multiplataforma</option>
-        <option> area Infraestructura de Redes Digitales </option>
+        <option>TIC's area Infraestructura de Redes Digitales </option>
        <option>Mantenimiento Industrial </option>
         <option>Negocios area Ventas </option>
         <option>Negocios area Mercadotecnia </option>
