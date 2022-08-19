@@ -17,8 +17,12 @@ include ('../../BD/conexion.php');
  
  if($result == 1){
     echo "Se dio de alta de manera existo";
+    echo '<a href="../tablaeventos.php">Regresar al panel</a>';
+
  }else{
     echo"ocurrio un error al realizar el registro";
+    echo '<a href="../tablaeventos.php">Regresar al panel</a>';
+
  }
     class evento{
 
