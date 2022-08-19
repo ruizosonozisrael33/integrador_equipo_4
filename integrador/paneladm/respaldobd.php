@@ -49,8 +49,9 @@ include './layauts/menunavbar.php';
                         <h2 class="col-12 text-center" >Presiona el boton para hacer el respando</h2>
                         <br><br><br>
                         <div class="col-12 text-center">
-                        <a type="text" class="btn btn-success " tabindex="-1" role="button" href="../respaldos/respresp.php">Respaldar</a>  
+                        <a type="text" class="btn btn-success " tabindex="-1" role="button" href="./RESPALDOBD/php/index.php">Respaldar</a>  
                         </div>
+
                         
                         <br><br><br><br><br><br>
 

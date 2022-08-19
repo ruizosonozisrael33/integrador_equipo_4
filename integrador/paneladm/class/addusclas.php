@@ -9,7 +9,7 @@ include ('../../BD/conexion.php');
  $apellidomatus=$_POST['apellidomatus'];
  $cuatri=$_POST['cuatri'];
  $correo=$_POST['correo'];
- $contraseña=$_POST['contraseña'];
+ $contraseña=md5($_POST['contraseña']);
  $carrera=$_POST['carrera'];
  $usuario=$_POST['usuario'];
 
